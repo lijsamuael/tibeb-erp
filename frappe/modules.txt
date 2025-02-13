@@ -1,0 +1,13 @@
+Core
+Website
+Workflow
+Email
+Custom
+Geo
+Desk
+Integrations
+Printing
+Contacts
+Social
+Automation
+Event Streaming

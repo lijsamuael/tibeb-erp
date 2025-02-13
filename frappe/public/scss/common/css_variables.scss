@@ -1,0 +1,283 @@
+$input-height: 28px !default;
+
+:root,
+[data-theme="light"] {
+	--brand-color: #0089ff;
+
+	--pink-900: #5b1e34;
+	--pink-800: #702440;
+	--pink-700: #97264f;
+	--pink-600: #d2326d;
+	--pink-500: #f2508b;
+	--pink-400: #f46b9e;
+	--pink-300: #f584ae;
+	--pink-200: #fab9d1;
+	--pink-100: #fcdce8;
+	--pink-50: #feedf3;
+
+	--blue-900: #1a4469;
+	--blue-800: #154875;
+	--blue-700: #1366ae;
+	--blue-600: #1673c5;
+	--blue-500: #2490ef;
+	--blue-400: #50a6f2;
+	--blue-300: #7cbcf5;
+	--blue-200: #a7d3f9;
+	--blue-100: #d3e9fc;
+	--blue-50: #f0f8fe;
+
+	--cyan-900: #006464;
+	--cyan-800: #007272;
+	--cyan-700: #008b8b;
+	--cyan-600: #02c5c5;
+	--cyan-500: #00ffff;
+	--cyan-400: #2ef8f8;
+	--cyan-300: #6efcfc;
+	--cyan-200: #a0f8f8;
+	--cyan-100: #c7fcfc;
+	--cyan-50: #dafafa;
+
+	--green-900: #2d401d;
+	--green-800: #44622a;
+	--green-700: #518b21;
+	--green-600: #68ab30;
+	--green-500: #8ccf54;
+	--green-400: #a5d97a;
+	--green-300: #bce39b;
+	--green-200: #d2ecbd;
+	--green-100: #e9f6de;
+	--green-50: #f4faee;
+
+	--dark-green-900: #1f3e2b;
+	--dark-green-800: #29593b;
+	--dark-green-700: #286840;
+	--dark-green-600: #2e844e;
+	--dark-green-500: #2f9d58;
+	--dark-green-400: #59b179;
+	--dark-green-300: #82c49b;
+	--dark-green-200: #acd8bc;
+	--dark-green-100: #dfeee5;
+	--dark-green-50: #eaf5ee;
+
+	--gray-900: #1f272e;
+	--gray-800: #333c44;
+	--gray-700: #505a62;
+	--gray-600: #687178;
+	--gray-500: #98a1a9;
+	--gray-400: #c0c6cc;
+	--gray-300: #dce0e3;
+	--gray-200: #ebeef0;
+	--gray-100: #f4f5f6;
+	--gray-50: #f9fafa;
+
+	--red-900: #631d1d;
+	--red-800: #802121;
+	--red-700: #9b2c2c;
+	--red-600: #c53030;
+	--red-500: #e24c4c;
+	--red-400: #ec645e;
+	--red-300: #fca4a4;
+	--red-200: #fcc8c8;
+	--red-100: #ffecec;
+	--red-50: #fff5f5;
+
+	--yellow-900: #5f370e;
+	--yellow-800: #744210;
+	--yellow-700: #975a16;
+	--yellow-600: #b7791f;
+	--yellow-500: #d69e2e;
+	--yellow-400: #ecb64b;
+	--yellow-300: #f6c35e;
+	--yellow-200: #fad489;
+	--yellow-100: #fee9bf;
+	--yellow-50: #fef4e2;
+
+	--orange-900: #653019;
+	--orange-800: #7b3a1e;
+	--orange-700: #9c4621;
+	--orange-600: #cb5a2a;
+	--orange-500: #f8814f;
+	--orange-400: #f9966c;
+	--orange-300: #fdae8c;
+	--orange-200: #fecdb8;
+	--orange-100: #ffeae1;
+	--orange-50: #fff5f0;
+
+	--purple-900: #343360;
+	--purple-800: #45438f;
+	--purple-700: #4946bf;
+	--purple-600: #6461d6;
+	--purple-500: #8684ff;
+	--purple-400: #9897f7;
+	--purple-300: #b9b8fa;
+	--purple-200: #dad9f7;
+	--purple-100: #eaeafb;
+	--purple-50: #f2f2fd;
+
+	--padding-xs: 5px;
+	--padding-sm: 10px;
+	--padding-md: 15px;
+	--padding-lg: 20px;
+	--padding-xl: 30px;
+	--padding-2xl: 40px;
+
+	--margin-xs: 5px;
+	--margin-sm: 8px;
+	--margin-md: 15px;
+	--margin-lg: 20px;
+	--margin-xl: 30px;
+	--margin-2xl: 40px;
+
+	--font-stack: "Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+	--text-bold: 500;
+
+	--shadow-xs: rgba(0, 0, 0, 0.05) 0px 0.5px 0px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px,
+		rgba(0, 0, 0, 0.05) 0px 2px 4px 0px;
+	--shadow-sm: 0px 1px 2px rgba(25, 39, 52, 0.05), 0px 0px 4px rgba(25, 39, 52, 0.1);
+	--shadow-base: 0px 4px 8px rgba(25, 39, 52, 0.06), 0px 0px 4px rgba(25, 39, 52, 0.12);
+	--shadow-md: 0px 8px 14px rgba(25, 39, 52, 0.08), 0px 2px 6px rgba(25, 39, 52, 0.04);
+	--shadow-lg: 0px 18px 22px rgba(25, 39, 52, 0.1), 0px 1px 10px rgba(0, 0, 0, 0.06),
+		0px 0.5px 5px rgba(25, 39, 52, 0.04);
+
+	--drop-shadow: 0px 0.5px 0px rgba(0, 0, 0, 0.05), 0px 0px 0px rgba(0, 0, 0, 0),
+		0px 2px 4px rgba(0, 0, 0, 0.05);
+
+	--modal-shadow: var(--shadow-md);
+	--card-shadow: var(--shadow-sm);
+	--btn-shadow: var(--shadow-xs);
+
+	// Type Colors
+	--text-muted: var(--gray-700);
+	--text-light: var(--gray-800);
+	--text-color: var(--gray-900);
+	--heading-color: var(--gray-900);
+
+	// SVG Colors
+	--icon-fill: transparent;
+	--icon-fill-bg: var(--fg-color);
+	--icon-stroke: var(--gray-900);
+
+	// Background Text Color Pairs
+	--bg-blue: var(--blue-100);
+	--bg-light-blue: var(--blue-50);
+	--bg-dark-blue: var(--blue-300);
+	--bg-green: var(--dark-green-50);
+	--bg-yellow: var(--yellow-50);
+	--bg-orange: var(--orange-50);
+	--bg-red: var(--red-50);
+	--bg-gray: var(--gray-200);
+	--bg-grey: var(--gray-200);
+	--bg-light-gray: var(--gray-100);
+	--bg-dark-gray: var(--gray-400);
+	--bg-darkgrey: var(--gray-400);
+	--bg-purple: var(--purple-100);
+	--bg-pink: var(--pink-50);
+	--bg-cyan: var(--cyan-50);
+
+	//font sizes
+	--text-xs: 11px;
+	--text-sm: 12px;
+	--text-md: 13px;
+	--text-base: 14px;
+	--text-lg: 16px;
+	--text-xl: 18px;
+	--text-2xl: 20px;
+	--text-3xl: 22px;
+
+	--text-on-blue: var(--blue-700);
+	--text-on-light-blue: var(--blue-600);
+	--text-on-dark-blue: var(--blue-800);
+	--text-on-green: var(--dark-green-700);
+	--text-on-yellow: var(--yellow-700);
+	--text-on-orange: var(--orange-700);
+	--text-on-red: var(--red-600);
+	--text-on-gray: var(--gray-700);
+	--text-on-grey: var(--gray-700);
+	--text-on-darkgrey: var(--gray-800);
+	--text-on-dark-gray: var(--gray-800);
+	--text-on-light-gray: var(--gray-800);
+	--text-on-purple: var(--purple-700);
+	--text-on-pink: var(--pink-700);
+	--text-on-cyan: var(--cyan-800);
+
+	// alert colors
+	--alert-text-danger: var(--red-600);
+	--alert-text-warning: var(--yellow-700);
+	--alert-text-info: var(--blue-700);
+	--alert-text-success: var(--green-700);
+	--alert-bg-danger: var(--red-50);
+	--alert-bg-warning: var(--yellow-50);
+	--alert-bg-info: var(--blue-50);
+	--alert-bg-success: var(--green-50);
+
+	// Layout Colors
+	--bg-color: var(--gray-50);
+	--fg-color: white;
+	--navbar-bg: white;
+	--fg-hover-color: var(--gray-100);
+	--card-bg: var(--fg-color);
+	--disabled-text-color: var(--gray-700);
+	--disabled-control-bg: var(--gray-50);
+	--control-bg: var(--gray-100);
+	--control-bg-on-gray: var(--gray-200);
+	--awesomebar-focus-bg: var(--fg-color);
+	--modal-bg: white;
+	--toast-bg: var(--modal-bg);
+	--popover-bg: white;
+
+	--awesomplete-hover-bg: var(--control-bg);
+
+	// Button Colors
+	--btn-default-bg: var(--gray-100);
+	--btn-default-hover-bg: var(--gray-300);
+
+	// Other Colors
+	--sidebar-select-color: var(--gray-200);
+
+	--scrollbar-thumb-color: var(--gray-400);
+	--scrollbar-track-color: var(--gray-200);
+
+	--shadow-inset: inset 0px -1px 0px var(--gray-300);
+	--border-color: var(--gray-100);
+	--dark-border-color: var(--gray-300);
+	--table-border-color: var(--gray-200);
+	--highlight-color: var(--gray-50);
+	--yellow-highlight-color: var(--yellow-50);
+
+	--btn-group-border-color: var(--gray-300);
+
+	--highlight-shadow: 1px 1px 10px var(--blue-50), 0px 0px 4px var(--blue-600);
+
+	// code block
+	--code-block-bg: var(--gray-900);
+	--code-block-text: var(--gray-400);
+
+	// Border Sizes
+	--border-radius-sm: 4px;
+	--border-radius: 6px;
+	--border-radius-md: 8px;
+	--border-radius-lg: 12px;
+	--border-radius-full: 999px;
+
+	--primary-color: #2490ef;
+	--btn-height: 30px;
+
+	// input
+	--input-height: #{$input-height};
+	--input-disabled-bg: var(--gray-200);
+
+	// Checkbox
+	--checkbox-right-margin: var(--margin-xs);
+	--checkbox-size: 14px;
+	--checkbox-focus-shadow: 0 0 0 2px var(--gray-300);
+	--checkbox-gradient: linear-gradient(180deg, #4ac3f8 -124.51%, var(--primary) 100%);
+
+	// "diff" colors
+	--diff-added: var(--green-100);
+	--diff-removed: var(--red-100);
+
+	--right-arrow-svg: url("data: image/svg+xml;utf8, <svg width='6' height='8' viewBox='0 0 6 8' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1.25 7.5L4.75 4L1.25 0.5' stroke='%231F272E' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+	--left-arrow-svg: url("data: image/svg+xml;utf8, <svg width='6' height='8' viewBox='0 0 6 8' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M7.5 9.5L4 6l3.5-3.5' stroke='%231F272E' stroke-linecap='round' stroke-linejoin='round'></path></svg>");
+}
