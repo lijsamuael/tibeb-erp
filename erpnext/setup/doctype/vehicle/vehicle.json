@@ -1,0 +1,288 @@
+{
+ "actions": [],
+ "autoname": "field:license_plate",
+ "creation": "2016-09-03 03:33:27.680331",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "license_plate",
+  "vehicle_type",
+  "make",
+  "date",
+  "column_break_3",
+  "hourly_rate",
+  "model",
+  "type",
+  "fleet_type",
+  "equipment_type",
+  "vehicle_details",
+  "last_odometer",
+  "acquisition_date",
+  "location",
+  "driver",
+  "driver_phone_number",
+  "column_break_8",
+  "chassis_no",
+  "vehicle_value",
+  "employee",
+  "owner_phone_number",
+  "insurance_details",
+  "insurance_company",
+  "policy_no",
+  "column_break_15",
+  "start_date",
+  "end_date",
+  "additional_details",
+  "fuel_type",
+  "uom",
+  "carbon_check_date",
+  "column_break_21",
+  "color",
+  "wheels",
+  "doors",
+  "amended_from",
+  "penality"
+ ],
+ "fields": [
+  {
+   "fieldname": "license_plate",
+   "fieldtype": "Data",
+   "label": "License Plate / Serial Number",
+   "no_copy": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "make",
+   "fieldtype": "Data",
+   "label": "Make",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Model",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle_details",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "last_odometer",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Odometer Value (Last)",
+   "no_copy": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "acquisition_date",
+   "fieldtype": "Date",
+   "label": "Acquisition Date"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "chassis_no",
+   "fieldtype": "Data",
+   "label": "Chassis No"
+  },
+  {
+   "fieldname": "vehicle_value",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Vehicle Value",
+   "print_hide_if_no_value": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Owner"
+  },
+  {
+   "fieldname": "insurance_details",
+   "fieldtype": "Section Break",
+   "label": "Insurance Details"
+  },
+  {
+   "fieldname": "insurance_company",
+   "fieldtype": "Data",
+   "label": "Insurance Company"
+  },
+  {
+   "fieldname": "policy_no",
+   "fieldtype": "Data",
+   "label": "Policy No"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "additional_details",
+   "fieldtype": "Section Break",
+   "label": "Additional Details"
+  },
+  {
+   "fieldname": "fuel_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fuel Type",
+   "options": "Benzene\nDiesel\nPetrol\nNatural Gas\nElectric",
+   "reqd": 1
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Fuel UOM",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "carbon_check_date",
+   "fieldtype": "Date",
+   "label": "Last Carbon Check"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Data",
+   "label": "Color"
+  },
+  {
+   "fieldname": "wheels",
+   "fieldtype": "Int",
+   "label": "Wheels"
+  },
+  {
+   "fieldname": "doors",
+   "fieldtype": "Int",
+   "label": "Doors"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Vehicle",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.vehicle_type == \"Machinary\"",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Machinary Type",
+   "options": "\nExcavator\nRoller\nGrader\nLoader\nBack Loader\nDozer\nCrane\nDump Truck\nFuel Truck\nShower Truck"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "owner_phone_number",
+   "fieldtype": "Data",
+   "label": "Owner Phone number"
+  },
+  {
+   "fieldname": "hourly_rate",
+   "fieldtype": "Currency",
+   "label": "Hourly rate"
+  },
+  {
+   "fieldname": "vehicle_type",
+   "fieldtype": "Select",
+   "label": "Vehicle Type",
+   "options": "Machinary\nFleet\nEquipment"
+  },
+  {
+   "depends_on": "eval:doc.vehicle_type == \"Fleet\"",
+   "fieldname": "fleet_type",
+   "fieldtype": "Select",
+   "label": "Fleet Type",
+   "options": "Pick Up\nMinibus\nAutomibile\nISUZU"
+  },
+  {
+   "fieldname": "penality",
+   "fieldtype": "Data",
+   "label": "Penality"
+  },
+  {
+   "fieldname": "equipment_type",
+   "fieldtype": "Select",
+   "label": "Equipment Type",
+   "options": "\nGenerator\nMixer\nVibrator\nGrider"
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Data",
+   "label": "Driver"
+  },
+  {
+   "fieldname": "driver_phone_number",
+   "fieldtype": "Data",
+   "label": "Driver phone number"
+  }
+ ],
+ "links": [],
+ "modified": "2025-02-13 15:19:42.600543",
+ "modified_by": "Administrator",
+ "module": "Setup",
+ "name": "Vehicle",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fleet Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "license_plate,location,model",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,41 @@
+{
+ "chart_name": "Supplier Comparision Graph",
+ "chart_type": "Report",
+ "creation": "2025-01-23 09:58:04.707883",
+ "custom_options": "{\"x_field\": \"supplier_name\", \"chart_type\": \"Line\", \"y_axis_fields\": [{\"idx\": 1, \"__islocal\": true, \"y_field\": \"price\", \"color\": \"#449CF0\", \"name\": \"row 1\"}, {\"idx\": 2, \"__islocal\": true, \"y_field\": \"lead_time_days\", \"color\": \"#29CD42\", \"name\": \"row 2\"}, {\"idx\": 3, \"__islocal\": true, \"y_field\": \"qty\", \"color\": \"#EC864B\", \"name\": \"row 3\"}], \"y_fields\": [\"price\", \"lead_time_days\", \"qty\"], \"colors\": [\"#449CF0\", \"#29CD42\", \"#EC864B\"]}",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "filters_json": "{\"company\":\"Tibeb Design and Build\",\"from_date\":\"2024-12-23\",\"to_date\":\"2025-01-23\",\"supplier\":[],\"supplier_quotation\":[],\"group_by\":\"Group by Supplier\"}",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "modified": "2025-01-23 09:58:04.774179",
+ "modified_by": "Administrator",
+ "module": "Buying",
+ "name": "Supplier Comparision Graph",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "report_name": "Compare Supplier",
+ "roles": [],
+ "time_interval": "Yearly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Line",
+ "use_report_chart": 0,
+ "x_field": "supplier_name",
+ "y_axis": [
+  {
+   "color": "#449CF0",
+   "y_field": "price"
+  },
+  {
+   "color": "#29CD42",
+   "y_field": "lead_time_days"
+  },
+  {
+   "color": "#EC864B",
+   "y_field": "qty"
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-11 14:37:03.057711",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "number_of_trips",
+  "activity",
+  "loading_location",
+  "unloading_location"
+ ],
+ "fields": [
+  {
+   "fieldname": "number_of_trips",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Number of trips"
+  },
+  {
+   "fieldname": "activity",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Activity",
+   "options": "Cartaway\nBackfill\nBase course\nSelected material\nService\nOthers"
+  },
+  {
+   "fieldname": "loading_location",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Loading Location"
+  },
+  {
+   "fieldname": "unloading_location",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Unloading Location"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-11 14:37:08.653119",
+ "modified_by": "Administrator",
+ "module": "Support",
+ "name": "Trip",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
