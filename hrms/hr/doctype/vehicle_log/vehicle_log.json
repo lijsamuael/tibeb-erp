@@ -1,0 +1,302 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2016-09-03 14:14:51.788550",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "vehicle_section",
+  "naming_series",
+  "license_plate",
+  "vehicle_type",
+  "location",
+  "block__location",
+  "employee",
+  "driver",
+  "column_break_7",
+  "last_odometer",
+  "date",
+  "shift",
+  "model",
+  "make",
+  "odometer_reading",
+  "odometer",
+  "column_break_12",
+  "section_break_2gmbl",
+  "trip_record",
+  "refuelling_details",
+  "fuel_qty",
+  "price",
+  "column_break_15",
+  "supplier",
+  "invoice",
+  "oid_record_section",
+  "operation_time_record",
+  "total_operation_hour",
+  "idle_time_record",
+  "total_idle_hour",
+  "down_time_record",
+  "total_down_hour",
+  "service_details",
+  "service_detail",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "vehicle_section",
+   "fieldtype": "Section Break",
+   "options": "fa fa-user"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "HR-VLOG-.YYYY.-",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "license_plate",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "License Plate",
+   "options": "Vehicle",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "license_plate.employee",
+   "fetch_if_empty": 1,
+   "fieldname": "employee",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Owner",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "license_plate.model",
+   "fieldname": "model",
+   "fieldtype": "Read Only",
+   "label": "Model"
+  },
+  {
+   "fetch_from": "license_plate.make",
+   "fieldname": "make",
+   "fieldtype": "Read Only",
+   "label": "Make"
+  },
+  {
+   "fieldname": "odometer_reading",
+   "fieldtype": "Section Break",
+   "label": "Odometer Reading",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "odometer",
+   "fieldtype": "Int",
+   "label": "Current Odometer value ",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "refuelling_details",
+   "fieldtype": "Section Break",
+   "label": "Refuelling Details"
+  },
+  {
+   "fieldname": "fuel_qty",
+   "fieldtype": "Float",
+   "label": "Fuel Qty"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Fuel Price"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "invoice",
+   "fieldtype": "Data",
+   "label": "Invoice Ref"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "service_details",
+   "fieldtype": "Section Break",
+   "label": "Service Details"
+  },
+  {
+   "fieldname": "service_detail",
+   "fieldtype": "Table",
+   "options": "Vehicle Service"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Vehicle Log",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "license_plate.last_odometer",
+   "fieldname": "last_odometer",
+   "fieldtype": "Int",
+   "label": "Odometer Value ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "oid_record_section",
+   "fieldtype": "Section Break",
+   "label": "OID Record"
+  },
+  {
+   "fieldname": "operation_time_record",
+   "fieldtype": "Table",
+   "label": "Operation Time Record",
+   "options": "Operation Time Record"
+  },
+  {
+   "fieldname": "total_operation_hour",
+   "fieldtype": "Float",
+   "label": "Total Operation Hour"
+  },
+  {
+   "fieldname": "idle_time_record",
+   "fieldtype": "Table",
+   "label": "Idle Time Record",
+   "options": "Idle Time Record"
+  },
+  {
+   "fieldname": "total_idle_hour",
+   "fieldtype": "Float",
+   "label": "Total Idle Hour"
+  },
+  {
+   "fieldname": "down_time_record",
+   "fieldtype": "Table",
+   "label": "Down Time Record",
+   "options": "Down Time Record"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "total_down_hour",
+   "fieldtype": "Float",
+   "label": "Total Down Hour"
+  },
+  {
+   "fetch_from": "license_plate.location",
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Site",
+   "options": "Warehouse"
+  },
+  {
+   "fetch_from": "license_plate.type",
+   "fieldname": "vehicle_type",
+   "fieldtype": "Data",
+   "label": "Vehicle Type",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval:doc.vehicle_type ==\"Dump Truck\"",
+   "fieldname": "section_break_2gmbl",
+   "fieldtype": "Section Break",
+   "label": "Trip Record"
+  },
+  {
+   "fieldname": "trip_record",
+   "fieldtype": "Table",
+   "label": "Trip Record",
+   "options": "Trip"
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "label": "Shift",
+   "options": "Day\nNight"
+  },
+  {
+   "fieldname": "block__location",
+   "fieldtype": "Data",
+   "label": "Block / Location"
+  },
+  {
+   "fetch_from": "license_plate.driver",
+   "fieldname": "driver",
+   "fieldtype": "Data",
+   "label": "Driver",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-02-13 15:20:06.209549",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Vehicle Log",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fleet Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Vehicle Log Approver",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
