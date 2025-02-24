@@ -73,10 +73,10 @@
    "fetch_if_empty": 1,
    "fieldname": "employee",
    "fieldtype": "Data",
+   "hidden": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Owner",
-   "reqd": 1
+   "label": "Owner"
   },
   {
    "fieldname": "column_break_7",
@@ -262,7 +262,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2025-02-13 15:20:06.209549",
+ "modified": "2025-02-21 15:35:17.167733",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Vehicle Log",
