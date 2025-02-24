@@ -54,6 +54,8 @@
   "default_cash_account",
   "default_receivable_account",
   "round_off_account",
+  "default_payroll_payable_account",
+  "default_employee_advance_account",
   "round_off_cost_center",
   "write_off_account",
   "exchange_gain_loss_account",
@@ -705,6 +707,18 @@
    "fieldname": "submit_err_jv",
    "fieldtype": "Check",
    "label": "Submit ERR Journals?"
+  },
+  {
+   "fieldname": "default_payroll_payable_account",
+   "fieldtype": "Link",
+   "label": "Default Payroll Payable Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "default_employee_advance_account",
+   "fieldtype": "Link",
+   "label": "Default Employee Advance Account",
+   "options": "Account"
   }
  ],
  "icon": "fa fa-building",
@@ -712,7 +726,7 @@
  "image_field": "company_logo",
  "is_tree": 1,
  "links": [],
- "modified": "2024-07-24 18:17:56.413971",
+ "modified": "2025-02-14 10:09:40.651329",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Company",
@@ -772,6 +786,38 @@
   {
    "role": "Auditor",
    "select": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock Manager",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fleet Manager",
+   "select": 1,
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Maintenance Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
   }
  ],
  "show_name_in_global_search": 1,

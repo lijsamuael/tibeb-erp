@@ -7,6 +7,7 @@
  "field_order": [
   "supplier",
   "contact",
+  "mobile_no",
   "quote_status",
   "column_break_3",
   "supplier_name",
@@ -80,12 +81,19 @@
    "fieldtype": "Data",
    "label": "Email Id",
    "no_copy": 1
+  },
+  {
+   "fetch_from": "supplier.mobile_no",
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mobile no"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-01-31 11:54:10.425767",
+ "modified": "2025-02-24 08:46:28.538058",
  "modified_by": "Administrator",
  "module": "Buying",
  "name": "Request for Quotation Supplier",

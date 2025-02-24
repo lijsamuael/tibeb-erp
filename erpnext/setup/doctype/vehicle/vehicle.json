@@ -12,6 +12,7 @@
   "make",
   "date",
   "column_break_3",
+  "vehicle_status",
   "hourly_rate",
   "model",
   "type",
@@ -43,7 +44,10 @@
   "wheels",
   "doors",
   "amended_from",
-  "penality"
+  "penality",
+  "vehicle_contract",
+  "contract_type",
+  "profile"
  ],
  "fields": [
   {
@@ -235,7 +239,7 @@
    "fieldname": "fleet_type",
    "fieldtype": "Select",
    "label": "Fleet Type",
-   "options": "Pick Up\nMinibus\nAutomibile\nISUZU"
+   "options": "Pick Up\nMinibus\nAutomibile\nISUZU\nMotor\nConsultant Car\nOther"
   },
   {
    "fieldname": "penality",
@@ -243,6 +247,7 @@
    "label": "Penality"
   },
   {
+   "depends_on": "eval:doc.vehicle_type==\"Equipment\"",
    "fieldname": "equipment_type",
    "fieldtype": "Select",
    "label": "Equipment Type",
@@ -257,10 +262,34 @@
    "fieldname": "driver_phone_number",
    "fieldtype": "Data",
    "label": "Driver phone number"
+  },
+  {
+   "default": "Available",
+   "fieldname": "vehicle_status",
+   "fieldtype": "Select",
+   "label": "Vehicle Status",
+   "options": "Available\nOn Journey"
+  },
+  {
+   "fieldname": "vehicle_contract",
+   "fieldtype": "Select",
+   "label": "Vehicle Contract",
+   "options": "In Operation\nExited"
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Select",
+   "label": "Contract Type",
+   "options": "Sub-Contractor\nCompany Rent"
+  },
+  {
+   "fieldname": "profile",
+   "fieldtype": "Attach Image",
+   "label": "Profile"
   }
  ],
  "links": [],
- "modified": "2025-02-13 15:19:42.600543",
+ "modified": "2025-02-24 11:23:41.632459",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Vehicle",

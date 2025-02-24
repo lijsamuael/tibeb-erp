@@ -714,9 +714,11 @@
    "label": "Customer"
   },
   {
+   "depends_on": "eval:doc.stock_entry_type==\"Fuel Receipt\" || doc.stock_entry_type == \"Fuel Issue\"",
    "fieldname": "vehicle_plage_number",
    "fieldtype": "Link",
-   "label": "Vehicle Plate number",
+   "hidden": 1,
+   "label": "Vehicle Plate/ Serial number",
    "options": "Vehicle"
   },
   {
@@ -734,18 +736,19 @@
    "read_only": 1
   },
   {
-   "depends_on": "eval:doc.vehicle_plage_number\n",
+   "depends_on": "eval:doc.stock_entry_type == \"Fuel Issue\" || doc.stock_entry_type == \"Fuel Receipt\"",
    "fieldname": "voucher_number",
    "fieldtype": "Data",
    "label": "Voucher number"
   },
   {
-   "depends_on": "eval:doc.vehicle_plage_number\n",
+   "depends_on": "eval:doc.stock_entry_type == \"Fuel Receipt\"",
    "fieldname": "coupon_number",
    "fieldtype": "Data",
    "label": "Coupon number"
   },
   {
+   "depends_on": "eval:doc.vehicle_plage_number\n",
    "fieldname": "current_km_or_hr_reading",
    "fieldtype": "Data",
    "label": "Current Km or Hr reading"
@@ -763,7 +766,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-02-13 15:14:01.919631",
+ "modified": "2025-02-21 16:06:37.834039",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Stock Entry",
@@ -836,6 +839,7 @@
    "report": 1,
    "role": "Fleet Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
