@@ -64,8 +64,8 @@
    "type": "Link"
   }
  ],
- "modified": "2025-01-23 10:46:59.872084",
- "modified_by": "lijsamuael@gmail.com",
+ "modified": "2025-02-25 09:08:08.019661",
+ "modified_by": "Administrator",
  "module": "Payroll",
  "name": "Payroll",
  "number_cards": [],
@@ -75,9 +75,6 @@
  "quick_lists": [],
  "restrict_to_domain": "",
  "roles": [
-  {
-   "role": "HR User"
-  },
   {
    "role": "HR Manager"
   }

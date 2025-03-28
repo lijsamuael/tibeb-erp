@@ -34,7 +34,9 @@
   "currency",
   "column_break_18",
   "lower_range",
-  "upper_range"
+  "upper_range",
+  "location",
+  "prefered_start_date"
  ],
  "fields": [
   {
@@ -101,7 +103,9 @@
   {
    "fieldname": "resume_attachment",
    "fieldtype": "Attach",
-   "label": "Resume Attachment"
+   "ignore_user_permissions": 1,
+   "label": "Resume Attachment",
+   "reqd": 1
   },
   {
    "fieldname": "notes",
@@ -188,13 +192,23 @@
    "fieldtype": "Link",
    "label": "Designation",
    "options": "Designation"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Small Text",
+   "label": "Location"
+  },
+  {
+   "fieldname": "prefered_start_date",
+   "fieldtype": "Date",
+   "label": "Prefered Start Date"
   }
  ],
  "icon": "fa fa-user",
  "idx": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-27 13:09:56.340279",
+ "modified": "2025-03-03 18:20:20.480191",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Job Applicant",
@@ -209,6 +223,18 @@
    "read": 1,
    "report": 1,
    "role": "HR User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
    "share": 1,
    "write": 1
   }

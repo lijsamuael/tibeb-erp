@@ -387,8 +387,8 @@
    "type": "Link"
   }
  ],
- "modified": "2025-01-23 10:46:41.298067",
- "modified_by": "lijsamuael@gmail.com",
+ "modified": "2025-02-25 09:07:42.972414",
+ "modified_by": "Administrator",
  "module": "HR",
  "name": "HR",
  "number_cards": [],
@@ -400,9 +400,6 @@
  "roles": [
   {
    "role": "HR Manager"
-  },
-  {
-   "role": "HR User"
   }
  ],
  "sequence_id": 8.0,

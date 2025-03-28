@@ -10,7 +10,10 @@
   "vehicle_section",
   "naming_series",
   "license_plate",
+  "contract_type",
   "vehicle_type",
+  "machinary_type",
+  "equipment_type",
   "location",
   "block__location",
   "employee",
@@ -28,6 +31,7 @@
   "trip_record",
   "refuelling_details",
   "fuel_qty",
+  "fuel_utilized",
   "price",
   "column_break_15",
   "supplier",
@@ -121,11 +125,13 @@
   {
    "fieldname": "fuel_qty",
    "fieldtype": "Float",
+   "hidden": 1,
    "label": "Fuel Qty"
   },
   {
    "fieldname": "price",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Fuel Price"
   },
   {
@@ -135,12 +141,14 @@
   {
    "fieldname": "supplier",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Supplier",
    "options": "Supplier"
   },
   {
    "fieldname": "invoice",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Invoice Ref"
   },
   {
@@ -215,14 +223,13 @@
    "label": "Total Down Hour"
   },
   {
-   "fetch_from": "license_plate.location",
    "fieldname": "location",
    "fieldtype": "Link",
    "label": "Site",
    "options": "Warehouse"
   },
   {
-   "fetch_from": "license_plate.type",
+   "fetch_from": "license_plate.vehicle_type",
    "fieldname": "vehicle_type",
    "fieldtype": "Data",
    "label": "Vehicle Type",
@@ -258,11 +265,34 @@
    "fieldtype": "Data",
    "label": "Driver",
    "read_only": 1
+  },
+  {
+   "fieldname": "fuel_utilized",
+   "fieldtype": "Float",
+   "label": "Fuel Utilized"
+  },
+  {
+   "fetch_from": "license_plate.contract_type",
+   "fieldname": "contract_type",
+   "fieldtype": "Data",
+   "label": "Contract Type"
+  },
+  {
+   "fetch_from": "license_plate.type",
+   "fieldname": "machinary_type",
+   "fieldtype": "Data",
+   "label": "Machinery Type"
+  },
+  {
+   "fetch_from": "license_plate.equipment_type",
+   "fieldname": "equipment_type",
+   "fieldtype": "Data",
+   "label": "Equipment Type"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2025-02-21 15:35:17.167733",
+ "modified": "2025-03-13 12:02:07.563643",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Vehicle Log",
