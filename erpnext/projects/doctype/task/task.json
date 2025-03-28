@@ -22,6 +22,12 @@
   "parent_task",
   "completed_by",
   "completed_on",
+  "section_break_kd0vu",
+  "unit",
+  "unit_rate",
+  "column_break_8jxxp",
+  "quantity",
+  "amount",
   "sb_timeline",
   "exp_start_date",
   "expected_time",
@@ -390,6 +396,37 @@
    "fieldtype": "Data",
    "hidden": 1,
    "label": "Template Task"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_kd0vu",
+   "fieldtype": "Section Break",
+   "label": "Cost"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "label": "Unit",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "unit_rate",
+   "fieldtype": "Float",
+   "label": "Unit Rate"
+  },
+  {
+   "fieldname": "column_break_8jxxp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Float",
+   "label": "Amount"
   }
  ],
  "icon": "fa fa-check",
@@ -397,7 +434,7 @@
  "is_tree": 1,
  "links": [],
  "max_attachments": 5,
- "modified": "2025-01-15 11:29:04.658370",
+ "modified": "2025-03-28 08:58:08.347028",
  "modified_by": "Administrator",
  "module": "Projects",
  "name": "Task",

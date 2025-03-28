@@ -8,11 +8,13 @@
  "engine": "InnoDB",
  "field_order": [
   "license_plate",
+  "profile",
   "vehicle_type",
   "make",
   "date",
   "column_break_3",
   "vehicle_status",
+  "going_to",
   "hourly_rate",
   "model",
   "type",
@@ -45,9 +47,18 @@
   "doors",
   "amended_from",
   "penality",
-  "vehicle_contract",
+  "section_break_z8kxe",
   "contract_type",
-  "profile"
+  "column_break_c7adh",
+  "operation_status",
+  "section_break_xprnd",
+  "commercial_license",
+  "vat_registration",
+  "ownership_document",
+  "column_break_hjkfg",
+  "insurance_certificate",
+  "tin_certificate",
+  "termination_letter"
  ],
  "fields": [
   {
@@ -239,7 +250,7 @@
    "fieldname": "fleet_type",
    "fieldtype": "Select",
    "label": "Fleet Type",
-   "options": "Pick Up\nMinibus\nAutomibile\nISUZU\nMotor\nConsultant Car\nOther"
+   "options": "\nPick Up\nMinibus\nAutomibile\nISUZU\nMotor\nConsultant Car\nOther"
   },
   {
    "fieldname": "penality",
@@ -271,25 +282,77 @@
    "options": "Available\nOn Journey"
   },
   {
-   "fieldname": "vehicle_contract",
-   "fieldtype": "Select",
-   "label": "Vehicle Contract",
-   "options": "In Operation\nExited"
+   "fieldname": "section_break_z8kxe",
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "contract_type",
    "fieldtype": "Select",
    "label": "Contract Type",
-   "options": "Sub-Contractor\nCompany Rent"
+   "options": "\nRent\nOwned\nSub-Contractor"
+  },
+  {
+   "fieldname": "operation_status",
+   "fieldtype": "Select",
+   "label": "Operation Status",
+   "options": "\nOut of Service\nOperational\nTerminated\nUnder Maintenance"
+  },
+  {
+   "fieldname": "column_break_c7adh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xprnd",
+   "fieldtype": "Section Break",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "commercial_license",
+   "fieldtype": "Attach",
+   "label": "Commercial License"
+  },
+  {
+   "fieldname": "vat_registration",
+   "fieldtype": "Attach",
+   "label": "VAT Registration"
+  },
+  {
+   "fieldname": "ownership_document",
+   "fieldtype": "Attach",
+   "label": "Ownership Document"
+  },
+  {
+   "fieldname": "column_break_hjkfg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "insurance_certificate",
+   "fieldtype": "Attach",
+   "label": "Insurance Certificate"
+  },
+  {
+   "fieldname": "tin_certificate",
+   "fieldtype": "Attach",
+   "label": "TIN Certificate"
+  },
+  {
+   "fieldname": "termination_letter",
+   "fieldtype": "Attach",
+   "label": "Termination Letter"
   },
   {
    "fieldname": "profile",
    "fieldtype": "Attach Image",
    "label": "Profile"
+  },
+  {
+   "fieldname": "going_to",
+   "fieldtype": "Data",
+   "label": "Going To"
   }
  ],
  "links": [],
- "modified": "2025-02-24 11:23:41.632459",
+ "modified": "2025-03-09 12:57:04.838793",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Vehicle",

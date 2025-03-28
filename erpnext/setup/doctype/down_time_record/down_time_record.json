@@ -10,7 +10,7 @@
   "start_time",
   "end_time",
   "down_hour",
-  "reason"
+  "down_reason"
  ],
  "fields": [
   {
@@ -33,7 +33,7 @@
    "read_only": 1
   },
   {
-   "fieldname": "reason",
+   "fieldname": "down_reason",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Reason For Down ",
@@ -43,7 +43,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-01-27 12:17:59.847838",
+ "modified": "2025-03-09 13:11:59.923617",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Down Time Record",

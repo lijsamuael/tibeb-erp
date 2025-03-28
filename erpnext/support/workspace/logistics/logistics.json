@@ -9,7 +9,7 @@
    "label": "Warhouse Wise Vehicle Numbers"
   }
  ],
- "content": "[{\"id\":\"OwUjFy4hoj\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Category Wise Vehicle Numbers\",\"col\":6}},{\"id\":\"7uKYMwNwv7\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Warhouse Wise Vehicle Numbers\",\"col\":6}},{\"id\":\"gaUEuXO7YU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"All Requests\",\"col\":3}},{\"id\":\"9LPBdtKS5N\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pending Vehicle Requests\",\"col\":3}},{\"id\":\"grczb91LzQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Approved Requests\",\"col\":3}},{\"id\":\"xKgnjV8MaW\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vehicles On Journey\",\"col\":3}},{\"id\":\"y5PbtsAsuP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Delivered Journeys\",\"col\":3}},{\"id\":\"LAQhowysgG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Fuel Request & Distribution\",\"col\":3}},{\"id\":\"R8Ef7BjsP8\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"1tqpEng0w2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Available Vehicles - Lemi Park \",\"col\":4}},{\"id\":\"9c2-1jCHDF\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Available Vehicles - River Side\",\"col\":4}},{\"id\":\"k4aATt7DF8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Available Vehicles - Head Office\",\"col\":4}},{\"id\":\"yuK-eudfqE\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"DVXOhmRUm6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lemi Park Machineries\",\"col\":3}},{\"id\":\"4u4tICj6ZH\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"River Side Machineries\",\"col\":3}},{\"id\":\"ArG6vc-0bh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"River Side Dump Trucks\",\"col\":3}},{\"id\":\"8Ww-Ktc_os\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"OTS8kx2f3x\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Maintenance Visit\",\"col\":3}},{\"id\":\"QMuqRnGZlE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Scheduled Maintenance\",\"col\":3}},{\"id\":\"7pCpmwV4-1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unscheduled Maintenance\",\"col\":3}},{\"id\":\"4EPh7twRPw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Breakdown Maintenance\",\"col\":3}},{\"id\":\"WKoxNIX0JJ\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"oxhWhXp9b2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"_lndiuJTVP\",\"type\":\"card\",\"data\":{\"card_name\":\"Master Data\",\"col\":4}},{\"id\":\"M5fxGuFwUR\",\"type\":\"card\",\"data\":{\"card_name\":\"Vehicle Maintenance\",\"col\":4}},{\"id\":\"R_aNO5ESzJ\",\"type\":\"card\",\"data\":{\"card_name\":\"Vehicle Related \",\"col\":4}},{\"id\":\"Ff8Ab3nLLN\",\"type\":\"card\",\"data\":{\"card_name\":\"Issues\",\"col\":4}},{\"id\":\"N8aA2afWfi\",\"type\":\"card\",\"data\":{\"card_name\":\"Warranty\",\"col\":4}}]",
+ "content": "[{\"id\":\"OwUjFy4hoj\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Category Wise Vehicle Numbers\",\"col\":6}},{\"id\":\"7uKYMwNwv7\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Warhouse Wise Vehicle Numbers\",\"col\":6}},{\"id\":\"gaUEuXO7YU\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"All Requests\",\"col\":3}},{\"id\":\"LMOv3gCV3F\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"River Side Machineries\",\"col\":3}},{\"id\":\"9LPBdtKS5N\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pending Vehicle Requests\",\"col\":3}},{\"id\":\"grczb91LzQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Approved Requests\",\"col\":3}},{\"id\":\"xKgnjV8MaW\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vehicles On Journey\",\"col\":3}},{\"id\":\"y5PbtsAsuP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Delivered Journeys\",\"col\":3}},{\"id\":\"LAQhowysgG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Fuel Request & Distribution\",\"col\":3}},{\"id\":\"R8Ef7BjsP8\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"1tqpEng0w2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Available Vehicles - Lemi Park \",\"col\":4}},{\"id\":\"9c2-1jCHDF\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Available Vehicles - River Side\",\"col\":4}},{\"id\":\"k4aATt7DF8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Available Vehicles - Head Office\",\"col\":4}},{\"id\":\"yuK-eudfqE\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"DVXOhmRUm6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lemi Park Machineries\",\"col\":3}},{\"id\":\"4u4tICj6ZH\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"River Side Machineries\",\"col\":3}},{\"id\":\"ArG6vc-0bh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"River Side Dump Trucks\",\"col\":3}},{\"id\":\"8Ww-Ktc_os\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"OTS8kx2f3x\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Maintenance Visit\",\"col\":3}},{\"id\":\"QMuqRnGZlE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Scheduled Maintenance\",\"col\":3}},{\"id\":\"7pCpmwV4-1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unscheduled Maintenance\",\"col\":3}},{\"id\":\"4EPh7twRPw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Breakdown Maintenance\",\"col\":3}},{\"id\":\"WKoxNIX0JJ\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"oxhWhXp9b2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"_lndiuJTVP\",\"type\":\"card\",\"data\":{\"card_name\":\"Master Data\",\"col\":4}},{\"id\":\"M5fxGuFwUR\",\"type\":\"card\",\"data\":{\"card_name\":\"Vehicle Maintenance\",\"col\":4}},{\"id\":\"R_aNO5ESzJ\",\"type\":\"card\",\"data\":{\"card_name\":\"Vehicle Related \",\"col\":4}},{\"id\":\"Ff8Ab3nLLN\",\"type\":\"card\",\"data\":{\"card_name\":\"Issues\",\"col\":4}},{\"id\":\"N8aA2afWfi\",\"type\":\"card\",\"data\":{\"card_name\":\"Warranty\",\"col\":4}}]",
  "creation": "2020-03-02 15:48:23.224699",
  "custom_blocks": [],
  "docstatus": 0,
@@ -245,7 +245,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-02-24 10:23:14.538222",
+ "modified": "2025-03-12 10:27:49.223605",
  "modified_by": "Administrator",
  "module": "Support",
  "name": "Logistics",
@@ -268,14 +268,6 @@
  ],
  "sequence_id": 22.0,
  "shortcuts": [
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "River Side Machineries",
-   "link_to": "Vehicle",
-   "stats_filter": "[[\"Vehicle\",\"location\",\"=\",\"River Side Development Project - TDAB\",false],[\"Vehicle\",\"vehicle_type\",\"=\",\"Machinary\",false],[\"Vehicle\",\"type\",\"!=\",\"Dump Truck\",false]]",
-   "type": "DocType"
-  },
   {
    "color": "Grey",
    "doc_view": "List",
@@ -344,6 +336,14 @@
    "stats_filter": "[[\"Transport Request\",\"workflow_state\",\"=\",\"Approved\",false]]",
    "type": "DocType",
    "url": "https://erp.tibebgroup.com/app/transport-request?workflow_state=Approved"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "River Side Machineries",
+   "link_to": "Vehicle",
+   "stats_filter": "[[\"Vehicle\",\"vehicle_type\",\"=\",\"Machinary\",false],[\"Vehicle\",\"location\",\"=\",\"River Side Development Project - TDAB\",false]]",
+   "type": "DocType"
   },
   {
    "color": "Green",

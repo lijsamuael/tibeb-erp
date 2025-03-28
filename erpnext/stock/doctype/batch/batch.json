@@ -13,6 +13,7 @@
   "use_batchwise_valuation",
   "sb_batch",
   "batch_id",
+  "target_warehouse",
   "item",
   "item_name",
   "image",
@@ -201,6 +202,13 @@
    "label": "Use Batch-wise Valuation",
    "read_only": 1,
    "set_only_once": 1
+  },
+  {
+   "fieldname": "target_warehouse",
+   "fieldtype": "Link",
+   "label": "Target Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
   }
  ],
  "icon": "fa fa-archive",
@@ -208,7 +216,7 @@
  "image_field": "image",
  "links": [],
  "max_attachments": 5,
- "modified": "2023-11-09 12:17:28.339975",
+ "modified": "2025-03-17 12:18:47.289795",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Batch",
@@ -226,6 +234,19 @@
    "report": 1,
    "role": "Item Manager",
    "set_user_permissions": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock User",
+   "select": 1,
    "share": 1,
    "write": 1
   }

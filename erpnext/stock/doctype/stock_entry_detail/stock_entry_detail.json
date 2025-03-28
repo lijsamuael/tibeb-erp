@@ -11,11 +11,20 @@
   "has_item_scanned",
   "section_break_2",
   "s_warehouse",
+  "source_tracking",
   "col_break1",
   "t_warehouse",
   "sec_break1",
   "item_code",
   "plate_no",
+  "vehicle_type",
+  "machinery_type",
+  "fleet_type",
+  "equipment_type",
+  "odometer_reading",
+  "site_engineer",
+  "driver_name",
+  "issue_time",
   "item_name",
   "col_break2",
   "is_finished_item",
@@ -134,7 +143,6 @@
    "fieldname": "item_name",
    "fieldtype": "Data",
    "in_global_search": 1,
-   "in_list_view": 1,
    "label": "Item Name",
    "print_hide": 1,
    "read_only": 1
@@ -231,10 +239,12 @@
   {
    "fieldname": "uom",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "UOM",
    "oldfieldname": "uom",
    "oldfieldtype": "Link",
    "options": "UOM",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -393,7 +403,6 @@
    "description": "Material Request used to make this Stock Entry",
    "fieldname": "material_request",
    "fieldtype": "Link",
-   "hidden": 1,
    "label": "Material Request",
    "no_copy": 1,
    "options": "Material Request",
@@ -574,16 +583,78 @@
   {
    "depends_on": "eval:parent.stock_entry_type == \"Fuel Issue\" || parent.stock_entry_type == \"Fuel Receipt\"",
    "fieldname": "plate_no",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Plate No",
-   "mandatory_depends_on": "eval:parent.stock_entry_type == \"Fuel Issue\" || parent.stock_entry_type == \"Fuel Receipt\""
+   "options": "Vehicle"
+  },
+  {
+   "depends_on": "eval:parent.stock_entry_type == \"Fuel Issue\" || parent.stock_entry_type == \"Fuel Receipt\"",
+   "fetch_from": "plate_no.driver",
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Driver / Operator Name"
+  },
+  {
+   "depends_on": "eval:doc.vehicle_type == \"Machinary\"",
+   "fetch_from": "plate_no.type",
+   "fieldname": "machinery_type",
+   "fieldtype": "Data",
+   "label": "Machinery Type",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.vehicle_type == \"Fleet\"",
+   "fetch_from": "plate_no.fleet_type",
+   "fieldname": "fleet_type",
+   "fieldtype": "Data",
+   "label": "Fleet Type",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.vehicle_type == \"Equipment\"",
+   "fetch_from": "plate_no.equipment_type",
+   "fieldname": "equipment_type",
+   "fieldtype": "Data",
+   "label": "Equipment Type",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:parent.stock_entry_type == \"Fuel Issue\" || parent.stock_entry_type == \"Fuel Receipt\"",
+   "fetch_from": "plate_no.vehicle_type",
+   "fieldname": "vehicle_type",
+   "fieldtype": "Data",
+   "label": "Vehicle Type",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:parent.stock_entry_type == \"Fuel Issue\" || parent.stock_entry_type == \"Fuel Receipt\"",
+   "fieldname": "site_engineer",
+   "fieldtype": "Data",
+   "label": "Site Engineer"
+  },
+  {
+   "depends_on": "eval:parent.stock_entry_type == \"Fuel Issue\" || parent.stock_entry_type == \"Fuel Receipt\"",
+   "fieldname": "odometer_reading",
+   "fieldtype": "Int",
+   "label": "Odometer Reading"
+  },
+  {
+   "fieldname": "issue_time",
+   "fieldtype": "Time",
+   "label": "Issue Time"
+  },
+  {
+   "fieldname": "source_tracking",
+   "fieldtype": "Link",
+   "label": "Source Tracking",
+   "options": "Warehouse"
   }
  ],
  "idx": 1,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-02-21 15:58:56.343724",
+ "modified": "2025-03-22 09:06:57.264860",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Stock Entry Detail",

@@ -17,6 +17,7 @@
   "item_name",
   "item_group",
   "stock_uom",
+  "item_type",
   "column_break0",
   "disabled",
   "allow_alternative_item",
@@ -48,6 +49,7 @@
   "warranty_period",
   "weight_per_unit",
   "weight_uom",
+  "maintenance_schedule",
   "allow_negative_stock",
   "sb_barcodes",
   "barcodes",
@@ -136,7 +138,6 @@
    "label": "Item Code",
    "oldfieldname": "item_code",
    "oldfieldtype": "Data",
-   "reqd": 1,
    "unique": 1
   },
   {
@@ -172,7 +173,6 @@
    "oldfieldname": "item_group",
    "oldfieldtype": "Link",
    "options": "Item Group",
-   "reqd": 1,
    "search_index": 1
   },
   {
@@ -284,8 +284,7 @@
    "label": "Brand",
    "oldfieldname": "brand",
    "oldfieldtype": "Link",
-   "options": "Brand",
-   "print_hide": 1
+   "options": "Brand"
   },
   {
    "fieldname": "description",
@@ -376,7 +375,6 @@
   },
   {
    "collapsible": 1,
-   "depends_on": "is_stock_item",
    "fieldname": "reorder_section",
    "fieldtype": "Section Break",
    "label": "Auto re-order",
@@ -892,6 +890,17 @@
    "fieldname": "deferred_accounting_section",
    "fieldtype": "Section Break",
    "label": "Deferred Accounting"
+  },
+  {
+   "fieldname": "item_type",
+   "fieldtype": "Select",
+   "label": "Item Type",
+   "options": "Raw Material\nConsumable\nEquipment"
+  },
+  {
+   "fieldname": "maintenance_schedule",
+   "fieldtype": "Data",
+   "label": "Maintenance schedule"
   }
  ],
  "icon": "fa fa-tag",
@@ -900,7 +909,7 @@
  "index_web_pages_for_search": 1,
  "links": [],
  "make_attachments_public": 1,
- "modified": "2024-01-08 18:09:30.225085",
+ "modified": "2025-03-25 13:28:41.590021",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Item",
@@ -928,11 +937,18 @@
    "role": "Stock Manager"
   },
   {
+   "create": 1,
+   "delete": 1,
    "email": 1,
+   "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Stock User"
+   "role": "Stock User",
+   "select": 1,
+   "share": 1,
+   "write": 1
   },
   {
    "read": 1,
@@ -964,10 +980,10 @@
    "share": 1
   }
  ],
- "quick_entry": 1,
  "search_fields": "item_name,description,item_group,customer_code",
  "show_name_in_global_search": 1,
  "show_preview_popup": 1,
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

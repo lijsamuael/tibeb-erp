@@ -5,7 +5,7 @@
    "label": "Warehouse wise Stock Value"
   }
  ],
- "content": "[{\"id\":\"qJf7AStRHM\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Warehouse wise Stock Value\",\"col\":12}},{\"id\":\"oGri6pU5m2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"5aIMFUhOkb\",\"type\":\"header\",\"data\":{\"text\":\"<b>Quick Accesses</b>\",\"col\":12}},{\"id\":\"xf-qVAhICZ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":4}},{\"id\":\"QbqbVQTs7y\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Material Request\",\"col\":4}},{\"id\":\"6zqWGsqZFa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Entry\",\"col\":4}},{\"id\":\"vyt8L737Fh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Ledger\",\"col\":4}},{\"id\":\"8rx6q8h1Z3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Balance\",\"col\":4}},{\"id\":\"I79744ahlf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dashboard\",\"col\":4}},{\"id\":\"gGbS9qNLbn\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"QLNQkYbxC_\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Masters &amp; Reports</b></span>\",\"col\":12}},{\"id\":\"IIJzOOCx2c\",\"type\":\"card\",\"data\":{\"card_name\":\"Items and Pricing\",\"col\":4}},{\"id\":\"BaqTmyllC4\",\"type\":\"card\",\"data\":{\"card_name\":\"Stock Transactions\",\"col\":4}},{\"id\":\"WsQIKQ6oiE\",\"type\":\"card\",\"data\":{\"card_name\":\"Stock Reports\",\"col\":4}}]",
+ "content": "[{\"id\":\"qJf7AStRHM\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Warehouse wise Stock Value\",\"col\":12}},{\"id\":\"oGri6pU5m2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"5aIMFUhOkb\",\"type\":\"header\",\"data\":{\"text\":\"<b>Quick Accesses</b>\",\"col\":12}},{\"id\":\"xf-qVAhICZ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":4}},{\"id\":\"QbqbVQTs7y\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Material Request\",\"col\":4}},{\"id\":\"6zqWGsqZFa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Entry\",\"col\":4}},{\"id\":\"vyt8L737Fh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Ledger\",\"col\":4}},{\"id\":\"8rx6q8h1Z3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Balance\",\"col\":4}},{\"id\":\"I79744ahlf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dashboard\",\"col\":4}},{\"id\":\"3AOZUxaNuq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Reconciliation\",\"col\":3}},{\"id\":\"gGbS9qNLbn\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"QLNQkYbxC_\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Masters &amp; Reports</b></span>\",\"col\":12}},{\"id\":\"IIJzOOCx2c\",\"type\":\"card\",\"data\":{\"card_name\":\"Items and Pricing\",\"col\":4}},{\"id\":\"BaqTmyllC4\",\"type\":\"card\",\"data\":{\"card_name\":\"Stock Transactions\",\"col\":4}},{\"id\":\"WsQIKQ6oiE\",\"type\":\"card\",\"data\":{\"card_name\":\"Stock Reports\",\"col\":4}}]",
  "creation": "2020-03-02 15:43:10.096528",
  "custom_blocks": [],
  "docstatus": 0,
@@ -514,8 +514,8 @@
    "type": "Link"
   }
  ],
- "modified": "2025-02-05 12:10:51.964783",
- "modified_by": "jerusalem.girma@tibebgroup.com",
+ "modified": "2025-03-24 20:04:34.356928",
+ "modified_by": "Administrator",
  "module": "Stock",
  "name": "Inventory",
  "number_cards": [],
@@ -527,10 +527,27 @@
  "roles": [
   {
    "role": "Stock Manager"
+  },
+  {
+   "role": "Stock User"
+  },
+  {
+   "role": "Material Requester"
+  },
+  {
+   "role": "Material Receiver"
   }
  ],
  "sequence_id": 5.0,
  "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Stock Reconciliation",
+   "link_to": "Stock Reconciliation",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
   {
    "color": "Green",
    "doc_view": "",
