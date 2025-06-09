@@ -12,7 +12,11 @@
   "title",
   "naming_series",
   "supplier",
+  "bank_account",
+  "bank_account_no",
   "supplier_name",
+  "request_for_quotation",
+  "reason_for_purchase",
   "order_confirmation_no",
   "order_confirmation_date",
   "get_items_from_open_material_requests",
@@ -157,7 +161,8 @@
   "party_account_currency",
   "inter_company_order_reference",
   "is_old_subcontracting_flow",
-  "connections_tab"
+  "connections_tab",
+  "completed_time"
  ],
  "fields": [
   {
@@ -266,6 +271,7 @@
    "depends_on": "eval:doc.order_confirmation_no",
    "fieldname": "order_confirmation_date",
    "fieldtype": "Date",
+   "hidden": 1,
    "label": "Order Confirmation Date"
   },
   {
@@ -1267,24 +1273,50 @@
    "fieldtype": "Tab Break",
    "label": "Connections",
    "show_dashboard": 1
+  },
+  {
+   "fieldname": "request_for_quotation",
+   "fieldtype": "Link",
+   "label": "Referenced Supplier Quotation",
+   "options": "Supplier Quotation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reason_for_purchase",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Reason for buying from this supplier while its item price is high"
+  },
+  {
+   "fieldname": "completed_time",
+   "fieldtype": "Datetime",
+   "label": "Completed Time"
+  },
+  {
+   "fetch_from": "supplier.default_bank_account",
+   "fieldname": "bank_account",
+   "fieldtype": "Link",
+   "label": "Bank Account",
+   "options": "Bank Account"
+  },
+  {
+   "fetch_from": "bank_account.bank_account_no",
+   "fieldname": "bank_account_no",
+   "fieldtype": "Data",
+   "label": "Bank Account No"
   }
  ],
  "icon": "fa fa-file-text",
  "idx": 105,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-03-20 16:03:31.611808",
+ "modified": "2025-05-22 10:09:41.214425",
  "modified_by": "Administrator",
  "module": "Buying",
  "name": "Purchase Order",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
-  {
-   "read": 1,
-   "report": 1,
-   "role": "Stock User"
-  },
   {
    "amend": 1,
    "cancel": 1,
@@ -1317,6 +1349,52 @@
    "permlevel": 1,
    "read": 1,
    "role": "Purchase Manager",
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock User",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Purchase Requester\\",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Purchase Checker",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Purchase Approver",
+   "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],

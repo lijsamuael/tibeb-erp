@@ -5,7 +5,7 @@
    "label": "Warehouse wise Stock Value"
   }
  ],
- "content": "[{\"id\":\"qJf7AStRHM\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Warehouse wise Stock Value\",\"col\":12}},{\"id\":\"oGri6pU5m2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"5aIMFUhOkb\",\"type\":\"header\",\"data\":{\"text\":\"<b>Quick Accesses</b>\",\"col\":12}},{\"id\":\"xf-qVAhICZ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":4}},{\"id\":\"QbqbVQTs7y\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Material Request\",\"col\":4}},{\"id\":\"6zqWGsqZFa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Entry\",\"col\":4}},{\"id\":\"vyt8L737Fh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Ledger\",\"col\":4}},{\"id\":\"8rx6q8h1Z3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Balance\",\"col\":4}},{\"id\":\"I79744ahlf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dashboard\",\"col\":4}},{\"id\":\"3AOZUxaNuq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Reconciliation\",\"col\":3}},{\"id\":\"gGbS9qNLbn\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"QLNQkYbxC_\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Masters &amp; Reports</b></span>\",\"col\":12}},{\"id\":\"IIJzOOCx2c\",\"type\":\"card\",\"data\":{\"card_name\":\"Items and Pricing\",\"col\":4}},{\"id\":\"BaqTmyllC4\",\"type\":\"card\",\"data\":{\"card_name\":\"Stock Transactions\",\"col\":4}},{\"id\":\"WsQIKQ6oiE\",\"type\":\"card\",\"data\":{\"card_name\":\"Stock Reports\",\"col\":4}}]",
+ "content": "[{\"id\":\"qJf7AStRHM\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Warehouse wise Stock Value\",\"col\":12}},{\"id\":\"oGri6pU5m2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"5aIMFUhOkb\",\"type\":\"header\",\"data\":{\"text\":\"<b>Quick Accesses</b>\",\"col\":12}},{\"id\":\"xf-qVAhICZ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":4}},{\"id\":\"QbqbVQTs7y\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Material Request\",\"col\":4}},{\"id\":\"upA3ZC67IV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Site Purchase Request\",\"col\":3}},{\"id\":\"qsD2TnFPt4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Request\",\"col\":3}},{\"id\":\"z2TV177-9J\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Orders\",\"col\":3}},{\"id\":\"6zqWGsqZFa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Entry\",\"col\":3}},{\"id\":\"vyt8L737Fh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Ledger\",\"col\":4}},{\"id\":\"8rx6q8h1Z3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Balance\",\"col\":4}},{\"id\":\"I79744ahlf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dashboard\",\"col\":4}},{\"id\":\"3AOZUxaNuq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stock Reconciliation\",\"col\":3}},{\"id\":\"zsrJ6x9f65\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Value Report\",\"col\":3}},{\"id\":\"gGbS9qNLbn\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"QLNQkYbxC_\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Masters &amp; Reports</b></span>\",\"col\":12}},{\"id\":\"IIJzOOCx2c\",\"type\":\"card\",\"data\":{\"card_name\":\"Items and Pricing\",\"col\":4}},{\"id\":\"BaqTmyllC4\",\"type\":\"card\",\"data\":{\"card_name\":\"Stock Transactions\",\"col\":4}},{\"id\":\"WsQIKQ6oiE\",\"type\":\"card\",\"data\":{\"card_name\":\"Stock Reports\",\"col\":4}}]",
  "creation": "2020-03-02 15:43:10.096528",
  "custom_blocks": [],
  "docstatus": 0,
@@ -514,7 +514,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-03-24 20:04:34.356928",
+ "modified": "2025-05-13 11:50:10.883851",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Inventory",
@@ -543,9 +543,34 @@
   {
    "color": "Grey",
    "doc_view": "List",
+   "label": "Site Purchase Request",
+   "link_to": "Purchase Request",
+   "stats_filter": "[[\"Purchase Request\",\"warehouse\",\"=\",\"River Side Development Project - TDAB\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Purchase Orders",
+   "link_to": "Purchase Order",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Stock Reconciliation",
    "link_to": "Stock Reconciliation",
    "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "doc_view": "",
+   "format": "{} Pending",
+   "label": "Material Request",
+   "link_to": "Material Request",
+   "stats_filter": "[[\"Material Request\",\"material_request_type\",\"=\",\"Material Issue\",false]]",
    "type": "DocType"
   },
   {
@@ -558,6 +583,13 @@
    "type": "DocType"
   },
   {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Value Report",
+   "link_to": "Value Report",
+   "type": "Report"
+  },
+  {
    "color": "Orange",
    "doc_view": "",
    "label": "Stock Entry",
@@ -566,12 +598,11 @@
    "type": "DocType"
   },
   {
-   "color": "Yellow",
-   "doc_view": "",
-   "format": "{} Pending",
-   "label": "Material Request",
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Purchase Request",
    "link_to": "Material Request",
-   "stats_filter": "[]",
+   "stats_filter": "[[\"Material Request\",\"material_request_type\",\"=\",\"Purchase\",false]]",
    "type": "DocType"
   },
   {

@@ -20,9 +20,9 @@
   "column_break_4",
   "account",
   "company",
-  "address_and_contact",
   "address_html",
   "column_break_10",
+  "address_and_contact",
   "contact_html",
   "warehouse_contact_info",
   "email_id",
@@ -275,7 +275,7 @@
  "idx": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2025-02-08 09:57:42.482019",
+ "modified": "2025-05-29 09:19:13.431018",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Warehouse",
@@ -300,7 +300,19 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Stock User"
+   "role": "Accounts User"
+  },
+  {
+   "read": 1,
+   "role": "Manufacturing User"
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock User",
+   "select": 1
   },
   {
    "email": 1,
@@ -320,15 +332,16 @@
    "write": 1
   },
   {
+   "create": 1,
+   "delete": 1,
    "email": 1,
+   "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Accounts User"
-  },
-  {
-   "read": 1,
-   "role": "Manufacturing User"
+   "role": "Maintenance User",
+   "share": 1,
+   "write": 1
   },
   {
    "create": 1,
@@ -338,7 +351,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Maintenance User",
+   "role": "Fleet Manager",
    "share": 1,
    "write": 1
   }

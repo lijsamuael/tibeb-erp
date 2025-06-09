@@ -189,7 +189,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Master Data",
-   "link_count": 5,
+   "link_count": 8,
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -243,9 +243,39 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fuel Issue",
+   "link_count": 0,
+   "link_to": "Fuel Issue",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fuel Issue Report",
+   "link_count": 0,
+   "link_to": "Fuel Issue Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fuel Disposal",
+   "link_count": 0,
+   "link_to": "Fuel Disposal",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2025-03-12 10:27:49.223605",
+ "modified": "2025-05-07 16:03:33.978727",
  "modified_by": "Administrator",
  "module": "Support",
  "name": "Logistics",

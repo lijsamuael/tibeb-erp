@@ -1,0 +1,163 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{####}-PR-SITE-{YYYY}-{MM}-{DD}",
+ "creation": "2025-04-01 15:08:18.689796",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "purpose",
+  "required_by",
+  "warehouse",
+  "items",
+  "amended_from",
+  "date_received_by_technical",
+  "requested_by",
+  "checked_by",
+  "approved_by",
+  "requested_time",
+  "checked_time",
+  "approved_time"
+ ],
+ "fields": [
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Select",
+   "label": "Purpose",
+   "options": "Purchase"
+  },
+  {
+   "fieldname": "required_by",
+   "fieldtype": "Date",
+   "label": "Required On"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Purchase Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "date_received_by_technical",
+   "fieldtype": "Datetime",
+   "label": "Date Received By H.O."
+  },
+  {
+   "fieldname": "requested_by",
+   "fieldtype": "Data",
+   "label": "Requested By"
+  },
+  {
+   "fieldname": "checked_by",
+   "fieldtype": "Data",
+   "label": "Checked By"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Data",
+   "label": "Approved By"
+  },
+  {
+   "fieldname": "requested_time",
+   "fieldtype": "Datetime",
+   "label": "Requested Date and Time"
+  },
+  {
+   "fieldname": "checked_time",
+   "fieldtype": "Datetime",
+   "label": "Checked Date and Time"
+  },
+  {
+   "fieldname": "approved_time",
+   "fieldtype": "Datetime",
+   "label": "Approved Date and Time"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Purchase Request Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Material Request",
+   "link_fieldname": "purchase_request"
+  }
+ ],
+ "modified": "2025-04-29 09:39:05.308571",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "Purchase Request",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Purchase Requester",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Purchase Checker",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Purchase Approver",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

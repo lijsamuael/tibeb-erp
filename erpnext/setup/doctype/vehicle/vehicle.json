@@ -22,6 +22,7 @@
   "equipment_type",
   "vehicle_details",
   "last_odometer",
+  "km_reading",
   "acquisition_date",
   "location",
   "driver",
@@ -349,10 +350,16 @@
    "fieldname": "going_to",
    "fieldtype": "Data",
    "label": "Going To"
+  },
+  {
+   "fieldname": "km_reading",
+   "fieldtype": "Data",
+   "label": "KM Reading(Last)",
+   "read_only": 1
   }
  ],
  "links": [],
- "modified": "2025-03-09 12:57:04.838793",
+ "modified": "2025-04-30 08:40:29.902061",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Vehicle",

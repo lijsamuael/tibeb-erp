@@ -14,6 +14,7 @@
   "title",
   "naming_series",
   "supplier",
+  "voucher_number",
   "supplier_name",
   "supplier_delivery_note",
   "column_break1",
@@ -277,8 +278,7 @@
    "fieldtype": "Check",
    "label": "Is Return",
    "no_copy": 1,
-   "print_hide": 1,
-   "read_only": 1
+   "print_hide": 1
   },
   {
    "depends_on": "is_return",
@@ -288,7 +288,6 @@
    "no_copy": 1,
    "options": "Purchase Receipt",
    "print_hide": 1,
-   "read_only": 1,
    "search_index": 1
   },
   {
@@ -885,7 +884,7 @@
    "no_copy": 1,
    "oldfieldname": "status",
    "oldfieldtype": "Select",
-   "options": "\nDraft\nPartly Billed\nTo Bill\nCompleted\nReturn Issued\nCancelled\nClosed",
+   "options": "\nDraft\nTo Bill\nCompleted\nReturn Issued\nCancelled\nClosed",
    "print_hide": 1,
    "print_width": "150px",
    "read_only": 1,
@@ -1236,13 +1235,18 @@
    "fieldname": "named_place",
    "fieldtype": "Data",
    "label": "Named Place"
+  },
+  {
+   "fieldname": "voucher_number",
+   "fieldtype": "Data",
+   "label": "Voucher Number"
   }
  ],
  "icon": "fa fa-truck",
  "idx": 261,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-11-13 16:55:14.129055",
+ "modified": "2025-04-11 09:43:04.185718",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Purchase Receipt",

@@ -8,6 +8,8 @@
  "engine": "InnoDB",
  "field_order": [
   "subject",
+  "work_item",
+  "description",
   "project",
   "issue",
   "type",
@@ -38,7 +40,6 @@
   "duration",
   "is_milestone",
   "sb_details",
-  "description",
   "sb_depends_on",
   "depends_on",
   "depends_on_tasks",
@@ -95,6 +96,7 @@
   {
    "fieldname": "type",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Task Category",
    "options": "Task Type"
   },
@@ -325,6 +327,7 @@
   {
    "fieldname": "department",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Department",
    "options": "Department"
   },
@@ -410,6 +413,7 @@
    "options": "UOM"
   },
   {
+   "fetch_from": "work_item.total_unit_cost",
    "fieldname": "unit_rate",
    "fieldtype": "Float",
    "label": "Unit Rate"
@@ -427,6 +431,12 @@
    "fieldname": "amount",
    "fieldtype": "Float",
    "label": "Amount"
+  },
+  {
+   "fieldname": "work_item",
+   "fieldtype": "Link",
+   "label": "Work item",
+   "options": "CBD"
   }
  ],
  "icon": "fa fa-check",
@@ -434,7 +444,7 @@
  "is_tree": 1,
  "links": [],
  "max_attachments": 5,
- "modified": "2025-03-28 08:58:08.347028",
+ "modified": "2025-03-31 09:57:30.563665",
  "modified_by": "Administrator",
  "module": "Projects",
  "name": "Task",

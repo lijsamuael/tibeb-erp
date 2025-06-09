@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:LO-{#####}",
+ "creation": "2025-04-07 13:09:01.932083",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "task",
+  "work_item",
+  "column_break_1kiox",
+  "date",
+  "unit",
+  "executed_amount",
+  "section_break_c3zuh",
+  "labor_output"
+ ],
+ "fields": [
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "label": "Task",
+   "options": "Task"
+  },
+  {
+   "fieldname": "column_break_1kiox",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "labor_output",
+   "fieldtype": "Table",
+   "label": "Labor output",
+   "options": "Labor Output Child"
+  },
+  {
+   "fieldname": "section_break_c3zuh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "work_item",
+   "fieldtype": "Link",
+   "label": "Work item",
+   "options": "Task"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Float",
+   "label": "Unit"
+  },
+  {
+   "fieldname": "executed_amount",
+   "fieldtype": "Float",
+   "label": "Executed amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-08 12:52:31.087097",
+ "modified_by": "Administrator",
+ "module": "Projects",
+ "name": "Labor Output",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

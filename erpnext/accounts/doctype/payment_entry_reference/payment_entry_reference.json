@@ -39,6 +39,7 @@
    "in_list_view": 1,
    "label": "Name",
    "options": "reference_doctype",
+   "read_only": 1,
    "reqd": 1,
    "search_index": 1
   },
@@ -130,7 +131,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-09-16 18:11:50.019343",
+ "modified": "2025-05-19 16:31:48.274883",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Payment Entry Reference",

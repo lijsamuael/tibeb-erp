@@ -495,7 +495,7 @@
    "link_fieldname": "party"
   }
  ],
- "modified": "2025-01-31 10:49:51.835100",
+ "modified": "2025-05-19 10:11:38.887779",
  "modified_by": "Administrator",
  "module": "Buying",
  "name": "Supplier",
@@ -504,11 +504,14 @@
  "owner": "Administrator",
  "permissions": [
   {
+   "create": 1,
    "email": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Purchase User"
+   "role": "Purchase User",
+   "select": 1,
+   "write": 1
   },
   {
    "email": 1,

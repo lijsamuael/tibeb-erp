@@ -1,0 +1,297 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-04 19:49:27.462958",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "department",
+  "date",
+  "section_break_vqkih",
+  "question1",
+  "explain1",
+  "section_break_3gqrl",
+  "question2",
+  "explain2",
+  "section_break_raous",
+  "question3",
+  "explain3",
+  "section_break_78cod",
+  "question",
+  "section_break_bvvqp",
+  "question4",
+  "explain4",
+  "section_break_blezq",
+  "question5",
+  "explain5",
+  "section_break_6rg89",
+  "question7",
+  "explain7",
+  "section_break_qlusx",
+  "plain1",
+  "section_break_ykbmk",
+  "plain2",
+  "section_break_md7vd",
+  "plain3",
+  "section_break_mlfob",
+  "plain4",
+  "section_break_kxnd2",
+  "plain5",
+  "rate",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Select Your Name",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_vqkih",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Select Your Department",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_3gqrl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_raous",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_78cod",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_bvvqp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_blezq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_6rg89",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.question1 == \"No\" || doc.question1 == \"Somewhat\"",
+   "fieldname": "explain1",
+   "fieldtype": "Small Text",
+   "label": "If no/somewhat, please explain.",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.question2 == \"No\" || doc.question2 == \"Somewhat\"",
+   "fieldname": "explain2",
+   "fieldtype": "Small Text",
+   "label": "If no/somewhat, please explain why.",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_qlusx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_ykbmk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_md7vd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_mlfob",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_kxnd2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.question3 == \"No\" || doc.question3 == \"Somewhat\"",
+   "fieldname": "explain3",
+   "fieldtype": "Small Text",
+   "label": "If no/somewhat, please explain your experience.",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.question4 == \"No\" || doc.question4 == \"Somewhat\"",
+   "fieldname": "explain4",
+   "fieldtype": "Small Text",
+   "label": "If no/somewhat, please explain why.",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.question5 == \"No\" || doc.question5 == \"Somewhat\"",
+   "fieldname": "explain5",
+   "fieldtype": "Small Text",
+   "label": "If no/somewhat, please explain why.",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.question7 == \"No\" || doc.question7 == \"Somewhat\"",
+   "fieldname": "explain7",
+   "fieldtype": "Small Text",
+   "label": "If no/somewhat, please explain why.",
+   "reqd": 1
+  },
+  {
+   "fieldname": "question1",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Do you find the system easy to use?",
+   "options": "\nYes\nSomewhat\nNo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "question2",
+   "fieldtype": "Select",
+   "label": "Were you able to complete your tasks through the system without help?",
+   "options": "\nYes\nSomewhat\nNo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "question3",
+   "fieldtype": "Select",
+   "label": "Does the system respond quickly enough?",
+   "options": "\nYes\nSomewhat\nNo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "question4",
+   "fieldtype": "Select",
+   "label": "Would you recommend this system to other similar Companies?",
+   "options": "\nYes\nSomewhat\nNo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "question5",
+   "fieldtype": "Select",
+   "label": "Are you satisfied with the overall performance of the system?",
+   "options": "\nYes\nSomewhat\nNo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "question7",
+   "fieldtype": "Select",
+   "label": "Can the system replace the current traditional methods?",
+   "options": "\nYes\nSomewhat\nNo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Rating",
+   "label": "Please rate your overall experience with the system.",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Feedback Collection",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "question",
+   "fieldtype": "Select",
+   "label": "Do you receive sufficient help From Database/IT team when needed?",
+   "options": "\nYes\nSomewhat\nNo",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plain1",
+   "fieldtype": "Small Text",
+   "label": "What aspects of the system do you find most valuable?",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plain2",
+   "fieldtype": "Small Text",
+   "label": "What challenges have you encountered while using the system?",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plain3",
+   "fieldtype": "Small Text",
+   "label": "Which features are missing or need improvement?",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plain4",
+   "fieldtype": "Small Text",
+   "label": "What would enhance your overall experience with the system?",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plain5",
+   "fieldtype": "Small Text",
+   "label": "Do you have any additional comments or suggestions?",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-05 13:07:46.967982",
+ "modified_by": "Administrator",
+ "module": "Setup",
+ "name": "Feedback Collection",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock User",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

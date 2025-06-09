@@ -37,6 +37,12 @@
   "paid_to_account_balance",
   "payment_amounts_section",
   "paid_amount",
+  "value_without_vat",
+  "withholding_amount",
+  "net_payable",
+  "supplier",
+  "bank_account_name",
+  "bank_account_number",
   "paid_amount_after_tax",
   "source_exchange_rate",
   "base_paid_amount",
@@ -95,7 +101,8 @@
   "subscription_section",
   "auto_repeat",
   "amended_from",
-  "title"
+  "title",
+  "payment_request_reference"
  ],
  "fields": [
   {
@@ -298,7 +305,7 @@
    "bold": 1,
    "fieldname": "paid_amount",
    "fieldtype": "Currency",
-   "label": "Paid Amount",
+   "label": "Net Payable",
    "options": "paid_from_account_currency",
    "reqd": 1
   },
@@ -736,6 +743,49 @@
    "fieldname": "get_outstanding_orders",
    "fieldtype": "Button",
    "label": "Get Outstanding Orders"
+  },
+  {
+   "fieldname": "payment_request_reference",
+   "fieldtype": "Link",
+   "label": "payment request reference",
+   "options": "Payment Request"
+  },
+  {
+   "fieldname": "value_without_vat",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Value Without Vat"
+  },
+  {
+   "fieldname": "withholding_amount",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Withholding Amount"
+  },
+  {
+   "fieldname": "net_payable",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Net Payable"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fetch_from": "supplier.default_bank_account",
+   "fieldname": "bank_account_name",
+   "fieldtype": "Link",
+   "label": "Bank Account Name",
+   "options": "Bank Account"
+  },
+  {
+   "fetch_from": "bank_account_name.bank_account_no",
+   "fieldname": "bank_account_number",
+   "fieldtype": "Data",
+   "label": "Bank Account Number"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -749,7 +799,7 @@
    "table_fieldname": "payment_entries"
   }
  ],
- "modified": "2023-11-23 12:07:20.887885",
+ "modified": "2025-05-22 10:03:00.599906",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Payment Entry",
@@ -786,6 +836,33 @@
    "role": "Accounts Manager",
    "share": 1,
    "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Payment Checker",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Payment Requester",
+   "select": 1,
+   "share": 1,
    "write": 1
   }
  ],

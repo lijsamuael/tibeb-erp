@@ -26,8 +26,13 @@
   "date_of_joining",
   "image",
   "status",
-  "section_break_yj68r",
+  "section_break_hb2fr",
   "employment_type",
+  "time_keeper",
+  "project_manager",
+  "hr_manager",
+  "wage_rate",
+  "section_break_yj68r",
   "job_applicant",
   "column_break_r2bwq",
   "leave_approver",
@@ -243,8 +248,7 @@
    "label": "Gender",
    "oldfieldname": "gender",
    "oldfieldtype": "Select",
-   "options": "Gender",
-   "reqd": 1
+   "options": "Gender"
   },
   {
    "fieldname": "date_of_birth",
@@ -900,14 +904,47 @@
    "fieldname": "salary_slip",
    "fieldtype": "Data",
    "label": "Salary Slip"
+  },
+  {
+   "depends_on": "eval:doc.employment_type==\"Labor\"",
+   "fieldname": "time_keeper",
+   "fieldtype": "Data",
+   "label": "Time Keeper"
+  },
+  {
+   "depends_on": "eval:doc.employment_type==\"Labor\"",
+   "fieldname": "project_manager",
+   "fieldtype": "Data",
+   "label": "Project Manager"
+  },
+  {
+   "depends_on": "eval:doc.employment_type==\"Labor\"",
+   "fieldname": "hr_manager",
+   "fieldtype": "Data",
+   "label": "HR Manager"
+  },
+  {
+   "fieldname": "section_break_hb2fr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.employment_type==\"Labor\"",
+   "fieldname": "wage_rate",
+   "fieldtype": "Float",
+   "label": "Wage Rate"
   }
  ],
  "icon": "fa fa-user",
  "idx": 24,
  "image_field": "image",
  "is_tree": 1,
- "links": [],
- "modified": "2025-01-15 11:43:24.726949",
+ "links": [
+  {
+   "link_doctype": "Labor Timesheet",
+   "link_fieldname": "employee"
+  }
+ ],
+ "modified": "2025-05-14 12:23:53.910481",
  "modified_by": "Administrator",
  "module": "Setup",
  "name": "Employee",

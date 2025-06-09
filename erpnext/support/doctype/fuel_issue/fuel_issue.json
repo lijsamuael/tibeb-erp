@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-04-30 09:17:35.083264",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "plate_no",
+  "machinery_type",
+  "driver_name",
+  "previous_km_reading",
+  "previously_issued_fuel",
+  "new_km_reading",
+  "column_break_jxp5k",
+  "difference",
+  "actual_hr",
+  "fuel_issued",
+  "voucher_no",
+  "remark",
+  "naming_series"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "plate_no",
+   "fieldtype": "Link",
+   "label": "Plate No",
+   "options": "Vehicle"
+  },
+  {
+   "fetch_from": "plate_no.type",
+   "fieldname": "machinery_type",
+   "fieldtype": "Data",
+   "label": "Machinery Type"
+  },
+  {
+   "fetch_from": "plate_no.driver",
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name"
+  },
+  {
+   "fetch_from": "plate_no.km_reading",
+   "fieldname": "previous_km_reading",
+   "fieldtype": "Int",
+   "label": "Previous KM reading"
+  },
+  {
+   "fieldname": "new_km_reading",
+   "fieldtype": "Int",
+   "label": "New KM reading"
+  },
+  {
+   "fieldname": "column_break_jxp5k",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "difference",
+   "fieldtype": "Int",
+   "label": "Difference"
+  },
+  {
+   "fieldname": "fuel_issued",
+   "fieldtype": "Float",
+   "label": "Fuel Issued"
+  },
+  {
+   "fieldname": "voucher_no",
+   "fieldtype": "Data",
+   "label": "Voucher No"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "FI-"
+  },
+  {
+   "fetch_from": "plate_no.fleet_type",
+   "fieldname": "previously_issued_fuel",
+   "fieldtype": "Float",
+   "label": "Previously Issued Fuel",
+   "read_only": 1
+  },
+  {
+   "fieldname": "actual_hr",
+   "fieldtype": "Float",
+   "label": "Actual HR"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-02 08:57:16.986615",
+ "modified_by": "Administrator",
+ "module": "Support",
+ "name": "Fuel Issue",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fleet Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

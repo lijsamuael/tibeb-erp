@@ -12,6 +12,7 @@
   "section_break_2",
   "s_warehouse",
   "source_tracking",
+  "target_tracking",
   "col_break1",
   "t_warehouse",
   "sec_break1",
@@ -25,6 +26,8 @@
   "site_engineer",
   "driver_name",
   "issue_time",
+  "allocation_document",
+  "allocation_left",
   "item_name",
   "col_break2",
   "is_finished_item",
@@ -230,6 +233,7 @@
    "fieldtype": "Currency",
    "label": "Valuation Rate",
    "options": "Company:company:default_currency",
+   "print_hide": 1,
    "read_only": 1
   },
   {
@@ -244,7 +248,6 @@
    "oldfieldname": "uom",
    "oldfieldtype": "Link",
    "options": "UOM",
-   "read_only": 1,
    "reqd": 1
   },
   {
@@ -358,7 +361,7 @@
    "label": "More Information"
   },
   {
-   "default": "1",
+   "default": "0",
    "fieldname": "allow_zero_valuation_rate",
    "fieldtype": "Check",
    "label": "Allow Zero Valuation Rate",
@@ -648,13 +651,32 @@
    "fieldtype": "Link",
    "label": "Source Tracking",
    "options": "Warehouse"
+  },
+  {
+   "fetch_from": "material_request_item.allocation_document",
+   "fieldname": "allocation_document",
+   "fieldtype": "Link",
+   "label": "Allocation Document",
+   "options": "Item Allocation"
+  },
+  {
+   "fetch_from": "material_request_item.allocation_left",
+   "fieldname": "allocation_left",
+   "fieldtype": "Data",
+   "label": "Allocation Left"
+  },
+  {
+   "fieldname": "target_tracking",
+   "fieldtype": "Link",
+   "label": "Target Tracking",
+   "options": "Warehouse"
   }
  ],
  "idx": 1,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-03-22 09:06:57.264860",
+ "modified": "2025-04-24 14:43:51.185244",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Stock Entry Detail",

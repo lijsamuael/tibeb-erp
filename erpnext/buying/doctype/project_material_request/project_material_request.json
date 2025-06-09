@@ -1,0 +1,59 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-08 22:38:33.245553",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "warehouse",
+  "required_by",
+  "project_material_request_items"
+ ],
+ "fields": [
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "required_by",
+   "fieldtype": "Datetime",
+   "label": "Required By"
+  },
+  {
+   "fieldname": "project_material_request_items",
+   "fieldtype": "Table",
+   "label": "Project Material Request Items",
+   "options": "Project Material Request Items"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-08 22:47:50.324765",
+ "modified_by": "Administrator",
+ "module": "Buying",
+ "name": "Project Material Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

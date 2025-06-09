@@ -18,6 +18,9 @@
   "reference_name",
   "transaction_details",
   "grand_total",
+  "supplier",
+  "bank_account_name",
+  "bank_account_no",
   "currency",
   "is_a_subscription",
   "column_break_18",
@@ -28,7 +31,7 @@
   "bank_account_details",
   "bank_account",
   "bank",
-  "bank_account_no",
+  "bank_account_number",
   "account",
   "column_break_11",
   "iban",
@@ -56,7 +59,8 @@
   "payment_account",
   "payment_channel",
   "payment_order",
-  "amended_from"
+  "amended_from",
+  "purchase_order_document"
  ],
  "fields": [
   {
@@ -148,7 +152,7 @@
    "fieldname": "grand_total",
    "fieldtype": "Currency",
    "in_preview": 1,
-   "label": "Amount",
+   "label": "Net Payable",
    "non_negative": 1,
    "options": "currency",
    "reqd": 1
@@ -203,9 +207,9 @@
    "read_only": 1
   },
   {
-   "fetch_from": "bank_account.bank_account_no",
+   "fetch_from": "bank_account_name.bank_account_no",
    "fieldname": "bank_account_no",
-   "fieldtype": "Read Only",
+   "fieldtype": "Data",
    "label": "Bank Account No"
   },
   {
@@ -414,13 +418,37 @@
    "label": "Party Account Currency",
    "options": "Currency",
    "read_only": 1
+  },
+  {
+   "fieldname": "purchase_order_document",
+   "fieldtype": "Link",
+   "label": "Purchase Order Document",
+   "options": "Purchase Order"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Data",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fetch_from": "supplier.default_bank_account",
+   "fieldname": "bank_account_name",
+   "fieldtype": "Data",
+   "label": "Bank Account"
+  },
+  {
+   "fetch_from": "bank_account.bank_account_no",
+   "fieldname": "bank_account_number",
+   "fieldtype": "Read Only",
+   "label": "Bank Account No"
   }
  ],
  "in_create": 1,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-01-24 11:08:10.676447",
+ "modified": "2025-05-22 10:01:24.190914",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Payment Request",

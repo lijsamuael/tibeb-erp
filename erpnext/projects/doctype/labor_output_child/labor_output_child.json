@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-04-07 13:16:15.946538",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "labor_type",
+  "no",
+  "uf",
+  "wagehr",
+  "working_hr",
+  "daily_cost",
+  "efficiency",
+  "remark"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "labor_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Labor type",
+   "options": "DL\nMason\nCarpenter\nG.Chief\nForman\nEquipment opra I\nTruck driver"
+  },
+  {
+   "columns": 1,
+   "fieldname": "no",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "NO"
+  },
+  {
+   "columns": 1,
+   "fieldname": "uf",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "UF"
+  },
+  {
+   "columns": 1,
+   "fieldname": "working_hr",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Working hr"
+  },
+  {
+   "columns": 1,
+   "fieldname": "daily_cost",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Daily cost"
+  },
+  {
+   "columns": 1,
+   "fieldname": "efficiency",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Efficiency"
+  },
+  {
+   "columns": 1,
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Remark"
+  },
+  {
+   "columns": 1,
+   "fieldname": "wagehr",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Wage/hr"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-04-08 12:07:13.958853",
+ "modified_by": "Administrator",
+ "module": "Projects",
+ "name": "Labor Output Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

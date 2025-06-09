@@ -12,14 +12,22 @@
   "naming_series",
   "title",
   "material_request_type",
+  "issue_status",
+  "requested_by",
+  "checked_by",
+  "approved_by",
   "customer",
   "company",
   "prepared_by",
   "reason_for_repeated_material_request",
-  "issued",
   "column_break_2",
   "transaction_date",
+  "issued",
   "schedule_date",
+  "is_mix_concrete",
+  "my_warehouse",
+  "task",
+  "purchase_requester",
   "reason",
   "amended_from",
   "warehouse_section",
@@ -32,6 +40,7 @@
   "item_balance_per_warehouse",
   "check_item_balances",
   "items",
+  "add_allocation",
   "available_purposes_for_each_item",
   "check_purpose",
   "terms_tab",
@@ -53,7 +62,8 @@
   "job_card",
   "column_break_35",
   "work_order",
-  "connections_tab"
+  "connections_tab",
+  "completed_time"
  ],
  "fields": [
   {
@@ -85,6 +95,7 @@
    "print_hide": 1
   },
   {
+   "depends_on": "eval:doc.workflow_state == \"Draft\" || doc.workflow_state == \"Requested\" || doc.workflow_state == \"Checked\" || doc.workflow_state == \"Approved\"\n",
    "fieldname": "material_request_type",
    "fieldtype": "Select",
    "in_list_view": 1,
@@ -374,6 +385,7 @@
   {
    "fieldname": "prepared_by",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Requested By"
   },
   {
@@ -383,14 +395,18 @@
    "label": "Reason For Repeated Material Request"
   },
   {
+   "allow_on_submit": 1,
+   "default": "0",
    "fieldname": "issued",
-   "fieldtype": "Select",
-   "label": "Issued"
+   "fieldtype": "Check",
+   "label": "Issued",
+   "read_only": 1
   },
   {
    "depends_on": "eval:doc.material_request_type == \"Purchase\" || doc.material_request_type == \"Material Issue\"",
    "fieldname": "reason",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Purpose ( Usage )"
   },
   {
@@ -416,13 +432,76 @@
    "fieldname": "check_purpose",
    "fieldtype": "Button",
    "label": "Check Available Purposes"
+  },
+  {
+   "fieldname": "requested_by",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Requester"
+  },
+  {
+   "fieldname": "checked_by",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Checker"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Approver"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.material_request_type == \"Purchase\" || doc.material_request_type == \"Material Issue\"",
+   "fieldname": "my_warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "label": "Task",
+   "options": "Task"
+  },
+  {
+   "fieldname": "add_allocation",
+   "fieldtype": "Button",
+   "label": "Add Allocation"
+  },
+  {
+   "fieldname": "completed_time",
+   "fieldtype": "Datetime",
+   "label": "Completed Time"
+  },
+  {
+   "default": "Not Issued",
+   "fieldname": "issue_status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Issue Status",
+   "options": "Not Issued\nIssued"
+  },
+  {
+   "depends_on": "eval:doc.material_request_type == \"Purchase\"",
+   "fieldname": "purchase_requester",
+   "fieldtype": "Data",
+   "label": "Purchase Requester"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_mix_concrete",
+   "fieldtype": "Check",
+   "label": "Is Mix Concrete"
   }
  ],
  "icon": "fa fa-ticket",
  "idx": 70,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-02-07 09:28:23.985367",
+ "modified": "2025-05-29 09:38:04.246624",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Material Request",
@@ -487,6 +566,45 @@
    "share": 1,
    "submit": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Material Approver",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Material Requester",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "DataBM",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
   }
  ],
  "quick_entry": 1,
@@ -495,5 +613,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "title"
+ "title_field": "title",
+ "track_changes": 1
 }

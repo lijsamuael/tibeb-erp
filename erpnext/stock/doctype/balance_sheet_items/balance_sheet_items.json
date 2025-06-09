@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-21 10:51:10.410480",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "warehouse",
+  "item_code",
+  "uom",
+  "item_name",
+  "delivered_qty",
+  "issued_qty",
+  "transferred_qty",
+  "old_balance",
+  "qty"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  },
+  {
+   "columns": 1,
+   "fieldname": "delivered_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Delivered Qty",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "issued_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Issued Qty",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "transferred_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Transferred Qty",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fetch_from": "item_code.stock_uom",
+   "fieldname": "uom",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "UOM",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "old_balance",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Old Balance"
+  },
+  {
+   "columns": 1,
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "New Balance",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-06-04 09:20:32.836358",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "Balance Sheet Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

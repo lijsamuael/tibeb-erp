@@ -1,0 +1,224 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Transport-Request-{YYYY}-{MM}-{DD}-{####}",
+ "creation": "2025-01-09 15:37:41.813221",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "transport_type",
+  "purchase_order",
+  "material_transfer",
+  "requested_by",
+  "priority",
+  "column_break_jdjlg",
+  "vehicle_type_required",
+  "date",
+  "time_of_pickup",
+  "vehicle_assigned",
+  "section_break_pekv7",
+  "from_location",
+  "type_from_location",
+  "column_break_mam2l",
+  "to_location",
+  "type_to_location",
+  "section_break_q7fjr",
+  "departure_time",
+  "column_break_rppvs",
+  "arrival_time",
+  "section_break_6brw1",
+  "items",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "transport_type",
+   "fieldtype": "Select",
+   "label": "Transport Type",
+   "options": "\nPersonal Transport\nPurchase Order\nMaterial Transfer\nRound Trip"
+  },
+  {
+   "depends_on": "eval:doc.transport_type == \"Purchase Order\"",
+   "fieldname": "purchase_order",
+   "fieldtype": "Link",
+   "label": "Purchase Order",
+   "options": "Purchase Order"
+  },
+  {
+   "depends_on": "eval:doc.transport_type == \"Material Transfer\"",
+   "fieldname": "material_transfer",
+   "fieldtype": "Link",
+   "label": "Material Transfer",
+   "options": "Stock Entry"
+  },
+  {
+   "fieldname": "requested_by",
+   "fieldtype": "Data",
+   "label": "Requested By"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "High\nMedium\nLow"
+  },
+  {
+   "fieldname": "column_break_jdjlg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle_type_required",
+   "fieldtype": "Select",
+   "label": "Vehicle Type Requested",
+   "options": "\nTruck\nVan\nMinibus"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "time_of_pickup",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "depends_on": "eval:doc.workflow_state === \"Requested\" || doc.workflow_state === \"Confirmed\" || doc.workflow_state === \"Journey Started\" || doc.workflow_state === \"Delivered\"",
+   "fieldname": "vehicle_assigned",
+   "fieldtype": "Link",
+   "label": "Vehicle Assigned",
+   "options": "Vehicle"
+  },
+  {
+   "fieldname": "section_break_pekv7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "from_location",
+   "fieldtype": "Link",
+   "label": "From Location",
+   "options": "Warehouse"
+  },
+  {
+   "depends_on": "eval:doc.from_location==\"Others - TDAB\"",
+   "fieldname": "type_from_location",
+   "fieldtype": "Data",
+   "label": "Type From Location"
+  },
+  {
+   "fieldname": "column_break_mam2l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to_location",
+   "fieldtype": "Link",
+   "label": "To Location",
+   "options": "Warehouse"
+  },
+  {
+   "depends_on": "eval:doc.to_location==\"Others - TDAB\"",
+   "fieldname": "type_to_location",
+   "fieldtype": "Data",
+   "label": "Type To Location"
+  },
+  {
+   "depends_on": "eval:doc.workflow_state === \"Confirmed\" || doc.workflow_state === \"Journey Started\" || doc.workflow_state === \"Delivered\"",
+   "fieldname": "section_break_q7fjr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Now",
+   "fieldname": "departure_time",
+   "fieldtype": "Time",
+   "label": "Departure Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_rppvs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Now",
+   "depends_on": "eval:doc.workflow_state === \"Journey Started\" || doc.workflow_state === \"Delivered\"",
+   "fieldname": "arrival_time",
+   "fieldtype": "Time",
+   "label": "Arrival Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_6brw1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.transport_type !== \"Personal Transport\" && doc.transport_type !== \"Round Trip\"",
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Transport Request Items",
+   "options": "Transport Request Item"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From.",
+   "no_copy": 1,
+   "options": "Transport Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-05-08 15:05:26.261234",
+ "modified_by": "Administrator",
+ "module": "Support",
+ "name": "Transport Request",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Maintenance User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Maintenance Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -7,6 +7,9 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "work_to_be_done_by",
+  "purchase_request",
+  "purchase_request_item",
   "work_item",
   "location",
   "qty_of_work",
@@ -16,7 +19,13 @@
   "col_break1",
   "schedule_date",
   "specification",
+  "concrete_grade",
+  "with_pupm",
   "plate_number",
+  "allocated_quantity",
+  "title",
+  "allocation_document",
+  "allocation_left",
   "section_break_4",
   "description",
   "column_break_12",
@@ -152,6 +161,7 @@
   },
   {
    "columns": 1,
+   "fetch_from": "item_code.stock_uom",
    "fieldname": "uom",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -508,21 +518,24 @@
    "fieldname": "work_item",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Work item"
+   "label": "Work item",
+   "reqd": 1
   },
   {
    "columns": 1,
    "fieldname": "location",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Location"
+   "label": "Location",
+   "reqd": 1
   },
   {
    "columns": 1,
    "fieldname": "qty_of_work",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Qty of work"
+   "label": "Qty of work",
+   "reqd": 1
   },
   {
    "columns": 1,
@@ -587,13 +600,64 @@
    "fieldtype": "Link",
    "label": "Plate Number",
    "options": "Vehicle"
+  },
+  {
+   "fieldname": "purchase_request",
+   "fieldtype": "Link",
+   "label": "Purchase Request",
+   "options": "Purchase Request",
+   "read_only": 1
+  },
+  {
+   "fieldname": "purchase_request_item",
+   "fieldtype": "Data",
+   "label": "Purchase Request Item"
+  },
+  {
+   "fieldname": "work_to_be_done_by",
+   "fieldtype": "Select",
+   "label": "Work To Be Done By",
+   "options": "\nOwn Force\nSub-Contractor"
+  },
+  {
+   "fieldname": "allocated_quantity",
+   "fieldtype": "Float",
+   "label": "Allocated Quantity"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "allocation_document",
+   "fieldtype": "Link",
+   "label": "Allocation Document",
+   "options": "Item Allocation"
+  },
+  {
+   "fetch_from": "allocation_document.allocation_left",
+   "fieldname": "allocation_left",
+   "fieldtype": "Data",
+   "label": "Allocation Left"
+  },
+  {
+   "fieldname": "concrete_grade",
+   "fieldtype": "Data",
+   "label": "Concrete Grade"
+  },
+  {
+   "default": "0",
+   "fieldname": "with_pupm",
+   "fieldtype": "Check",
+   "label": "With pupm?"
   }
  ],
  "idx": 1,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-03-27 09:30:15.886221",
+ "modified": "2025-05-24 08:59:09.186764",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Material Request Item",

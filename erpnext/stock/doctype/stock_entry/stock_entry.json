@@ -11,6 +11,7 @@
   "naming_series",
   "user_working_warehouse",
   "purpose_",
+  "source_warehouse_document",
   "stock_entry_type",
   "requested_by",
   "checked_by",
@@ -66,6 +67,7 @@
   "scan_barcode",
   "items_section",
   "items",
+  "workflow",
   "get_stock_and_rate",
   "section_break_19",
   "total_outgoing_value",
@@ -744,7 +746,8 @@
   {
    "fieldname": "voucher_number",
    "fieldtype": "Data",
-   "label": "Voucher number"
+   "label": "Voucher number",
+   "reqd": 1
   },
   {
    "depends_on": "eval:doc.stock_entry_type == \"Fuel Receipt\"",
@@ -770,35 +773,54 @@
    "fieldname": "purpose_",
    "fieldtype": "Select",
    "label": "Pupose",
-   "options": "\nReceive Material From Purchase\nReceive Material From Other Site\nTransfer Material to Other Site\nDistribute Material\nDistribute Fuel\nTransfer Fuel to Other Site\nReceive Fuel From Purchase\nReceive Fuel From Other Site"
+   "options": "\nReceive Material From Purchase\nReceive Material From Other Site\nTransfer Material to Other Site\nGive Out Material\nReceive Material From Petty Cash\nReturn Materials Back to Store\nDistribute Fuel\nTransfer Fuel to Other Site\nReceive Fuel From Purchase\nReceive Fuel From Other Site"
   },
   {
    "depends_on": "eval:doc.stock_entry_type == \"Material Issue\"",
    "fieldname": "request_doc",
    "fieldtype": "Link",
    "label": "Request Document",
-   "options": "Material Request"
+   "options": "Material Request",
+   "read_only": 1
   },
   {
-   "depends_on": "eval:doc.stock_entry_type == \"Material Issue\"",
+   "depends_on": "eval:doc.stock_entry_type == \"Give Out Material\" || doc.stock_entry_type == \"Material Issue\"",
    "fieldname": "requested_by",
-   "fieldtype": "Data",
-   "label": "Requester",
+   "fieldtype": "Link",
+   "label": "Requested By",
+   "options": "User",
    "read_only": 1
   },
   {
-   "depends_on": "eval:doc.stock_entry_type == \"Material Issue\"",
+   "depends_on": "eval:doc.stock_entry_type == \"Give Out Material\" || doc.stock_entry_type == \"Material Issue\"",
    "fieldname": "checked_by",
-   "fieldtype": "Data",
-   "label": "Checker",
+   "fieldtype": "Link",
+   "label": "Checked By",
+   "options": "User",
    "read_only": 1
   },
   {
-   "depends_on": "eval:doc.stock_entry_type == \"Material Issue\"",
+   "depends_on": "eval:doc.stock_entry_type == \"Give Out Material\" || doc.stock_entry_type == \"Material Issue\"",
    "fieldname": "approved_by",
-   "fieldtype": "Data",
-   "label": "Approver",
+   "fieldtype": "Link",
+   "label": "Approver By",
+   "options": "User",
    "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.purpose_ == \"Transfer Material From Other Site\" || doc.purpose_ == \"Receive Material From Other Site\"",
+   "fieldname": "source_warehouse_document",
+   "fieldtype": "Link",
+   "label": "Source Warehouse Document",
+   "options": "Stock Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "workflow",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Workflow",
+   "options": "\nRequest\nApprove\nReceive"
   }
  ],
  "icon": "fa fa-file-text",
@@ -806,7 +828,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-03-27 09:10:55.677572",
+ "modified": "2025-06-07 22:57:58.468654",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Stock Entry",
@@ -814,10 +836,6 @@
  "owner": "Administrator",
  "permissions": [
   {
-   "amend": 1,
-   "cancel": 1,
-   "create": 1,
-   "delete": 1,
    "email": 1,
    "if_owner": 1,
    "print": 1,
@@ -825,7 +843,6 @@
    "report": 1,
    "role": "Stock User",
    "share": 1,
-   "submit": 1,
    "write": 1
   },
   {
@@ -909,10 +926,7 @@
    "write": 1
   },
   {
-   "amend": 1,
-   "cancel": 1,
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -921,8 +935,17 @@
    "role": "DataBM",
    "select": 1,
    "share": 1,
-   "submit": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Management",
+   "select": 1,
+   "share": 1
   }
  ],
  "search_fields": "posting_date, from_warehouse, to_warehouse, purpose, remarks",

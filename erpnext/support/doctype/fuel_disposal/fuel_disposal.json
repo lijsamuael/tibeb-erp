@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-05-07 15:40:30.959650",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "site",
+  "fuel_purchased_qty",
+  "remaining_stock",
+  "fuel_purchased_amount",
+  "column_break_edwbf",
+  "unit_price",
+  "date",
+  "fuel_type",
+  "section_break_alwtu",
+  "table"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "FD-"
+  },
+  {
+   "fieldname": "remaining_stock",
+   "fieldtype": "Float",
+   "label": "Remaining (Stock)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "unit_price",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Unit Price",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_edwbf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fuel_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Fuel Type",
+   "options": "Benzen\nDiesel",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_alwtu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fuel_purchased_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Purchased Fuel Quantity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fuel_purchased_amount",
+   "fieldtype": "Float",
+   "label": "Purchased Fuel Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Link",
+   "label": "Site",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "table",
+   "fieldtype": "Table",
+   "label": "Fuel Disposal to Sites",
+   "options": "Fuel Disposal Table"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-07 16:08:06.808855",
+ "modified_by": "Administrator",
+ "module": "Support",
+ "name": "Fuel Disposal",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fleet Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

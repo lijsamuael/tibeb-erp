@@ -24,6 +24,7 @@
   "asset_name",
   "asset_category",
   "location",
+  "geo_location",
   "split_from",
   "custodian",
   "department",
@@ -100,8 +101,7 @@
    "fieldtype": "Link",
    "in_standard_filter": 1,
    "label": "Item Code",
-   "options": "Item",
-   "reqd": 1
+   "options": "Item"
   },
   {
    "depends_on": "item_code",
@@ -549,6 +549,11 @@
    "label": "Additional Asset Cost",
    "options": "Company:company:default_currency",
    "read_only": 1
+  },
+  {
+   "fieldname": "geo_location",
+   "fieldtype": "Geolocation",
+   "label": "Geo Location"
   }
  ],
  "idx": 72,
@@ -582,7 +587,7 @@
    "link_fieldname": "target_asset"
   }
  ],
- "modified": "2024-01-15 17:35:49.226603",
+ "modified": "2025-05-22 10:09:00.106880",
  "modified_by": "Administrator",
  "module": "Assets",
  "name": "Asset",
@@ -618,12 +623,35 @@
    "share": 1,
    "submit": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock Manager",
+   "share": 1,
+   "write": 1
   }
  ],
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "asset_name",
  "track_changes": 1
 }

@@ -5,14 +5,14 @@
    "label": "Open Projects"
   }
  ],
- "content": "[{\"type\":\"chart\",\"data\":{\"chart_name\":\"Open Projects\",\"col\":12}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Task\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Project\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Timesheet\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Project Billing Summary\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dashboard\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Projects\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Time Tracking\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}}]",
+ "content": "[{\"id\":\"VQq3ge0FsB\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Open Projects\",\"col\":12}},{\"id\":\"YMoO3sOg5C\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"T3rkhIqrif\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"j3wfMlxB4Q\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Task\",\"col\":3}},{\"id\":\"NPJENmqOrQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Project\",\"col\":3}},{\"id\":\"FBPFMOmmkt\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Cost break down\",\"col\":3}},{\"id\":\"jhgX3lxST0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Timesheet\",\"col\":3}},{\"id\":\"n-RdH0ngat\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Labor Output\",\"col\":3}},{\"id\":\"KT05Fu_HGo\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Machinery Log\",\"col\":3}},{\"id\":\"Bb6RRliIPt\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Material Request\",\"col\":3}},{\"id\":\"FBg1Oz9aM2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Project Billing Summary\",\"col\":3}},{\"id\":\"g1tF840Qwx\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dashboard\",\"col\":3}},{\"id\":\"SEozbJFdpA\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"JjwqgNaPP4\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"r0TemwNiXx\",\"type\":\"card\",\"data\":{\"card_name\":\"Projects\",\"col\":4}},{\"id\":\"b_jiQoZuNr\",\"type\":\"card\",\"data\":{\"card_name\":\"Time Tracking\",\"col\":4}},{\"id\":\"GhhXkgN0V-\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}},{\"id\":\"YROa96sF0f\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}}]",
  "creation": "2020-03-02 15:46:04.874669",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
  "hide_custom": 0,
- "icon": "project",
+ "icon": "group-by",
  "idx": 0,
  "is_hidden": 0,
  "label": "Projects",
@@ -124,10 +124,49 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Reports",
-   "link_count": 0,
+   "label": "Settings",
+   "link_count": 1,
    "onboard": 0,
    "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Projects Settings",
+   "link_count": 0,
+   "link_to": "Projects Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 6,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Labor Output Report",
+   "link_count": 0,
+   "link_to": "Labor Output Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Machinery Output Report",
+   "link_count": 0,
+   "link_to": "Machinery Output Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   },
   {
    "dependencies": "Timesheet",
@@ -172,27 +211,9 @@
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Settings",
-   "link_count": 1,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Projects Settings",
-   "link_count": 0,
-   "link_to": "Projects Settings",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
   }
  ],
- "modified": "2023-05-24 14:47:23.179860",
+ "modified": "2025-04-08 13:38:14.081075",
  "modified_by": "Administrator",
  "module": "Projects",
  "name": "Projects",
@@ -202,15 +223,55 @@
  "public": 1,
  "quick_lists": [],
  "restrict_to_domain": "",
- "roles": [],
- "sequence_id": 11.0,
+ "roles": [
+  {
+   "role": "Projects Manager"
+  },
+  {
+   "role": "Projects User"
+  }
+ ],
+ "sequence_id": 2.0,
  "shortcuts": [
   {
-   "color": "Blue",
-   "format": "{} Assigned",
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Labor Output",
+   "link_to": "Labor Output",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Machinery Log",
+   "link_to": "Vehicle Log",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Pink",
+   "doc_view": "List",
+   "label": "Cost break down",
+   "link_to": "CBD",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "",
+   "format": "{} Open",
    "label": "Task",
    "link_to": "Task",
-   "stats_filter": "{\n    \"_assign\": [\"like\", '%' + frappe.session.user + '%'],\n    \"status\": \"Open\"\n}",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Material Request",
+   "link_to": "Material Request",
+   "stats_filter": "[]",
    "type": "DocType"
   },
   {
