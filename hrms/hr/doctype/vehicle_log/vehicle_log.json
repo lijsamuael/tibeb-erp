@@ -10,6 +10,7 @@
   "vehicle_section",
   "naming_series",
   "license_plate",
+  "reantal_rate",
   "contract_type",
   "vehicle_type",
   "machinary_type",
@@ -21,6 +22,9 @@
   "column_break_7",
   "last_odometer",
   "date",
+  "project",
+  "task",
+  "work_item",
   "shift",
   "model",
   "make",
@@ -243,6 +247,7 @@
    "label": "Trip Record"
   },
   {
+   "depends_on": "eval:doc.machinary_type == \"Dump Truck\"",
    "fieldname": "trip_record",
    "fieldtype": "Table",
    "label": "Trip Record",
@@ -278,21 +283,47 @@
    "label": "Contract Type"
   },
   {
+   "depends_on": "eval:doc.vehicle_type == \"Machinary\"",
    "fetch_from": "license_plate.type",
    "fieldname": "machinary_type",
    "fieldtype": "Data",
    "label": "Machinery Type"
   },
   {
+   "depends_on": "eval:doc.vehicle_type == \"Equipment\"",
    "fetch_from": "license_plate.equipment_type",
    "fieldname": "equipment_type",
    "fieldtype": "Data",
    "label": "Equipment Type"
+  },
+  {
+   "fetch_from": "license_plate.hourly_rate",
+   "fieldname": "reantal_rate",
+   "fieldtype": "Float",
+   "label": "Rental Rate"
+  },
+  {
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "label": "Task",
+   "options": "Task"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "work_item",
+   "fieldtype": "Link",
+   "label": "Work item",
+   "options": "Task"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2025-03-13 12:02:07.563643",
+ "modified": "2025-04-30 09:02:40.239608",
  "modified_by": "Administrator",
  "module": "HR",
  "name": "Vehicle Log",

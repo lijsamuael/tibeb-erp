@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-05 16:14:05.562480",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "day",
+  "time",
+  "min",
+  "mout",
+  "ain",
+  "aout",
+  "nin",
+  "nout"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "day",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Day"
+  },
+  {
+   "columns": 1,
+   "fieldname": "mout",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "M.out"
+  },
+  {
+   "columns": 1,
+   "fieldname": "aout",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "A.out"
+  },
+  {
+   "columns": 1,
+   "fieldname": "nout",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "N.out"
+  },
+  {
+   "columns": 2,
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Time"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "min",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "M.in"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "ain",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "A.in"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "nin",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "N.in"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-06-05 16:23:32.807876",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Labor Log Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

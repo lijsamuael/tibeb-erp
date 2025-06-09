@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-04-29 14:27:57.654099",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "day",
+  "morning",
+  "afternoon",
+  "night"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "day",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Day"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "morning",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Morning"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "afternoon",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "Afternoon"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "night",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Night"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-04-29 14:29:07.880796",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Labor Timesheet Table 1",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

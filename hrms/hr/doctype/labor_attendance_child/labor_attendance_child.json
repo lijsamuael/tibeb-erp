@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-14 10:08:42.451764",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "min",
+  "mout",
+  "ain",
+  "aout",
+  "nin",
+  "nout"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "min",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "M.in"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "mout",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "M.out"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "ain",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "A.in"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "aout",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "A.out"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "nin",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "N.in"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "nout",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "N.out"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-05-14 10:10:58.505786",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Labor Attendance Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

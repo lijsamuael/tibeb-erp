@@ -1,0 +1,46 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2025-05-02 10:27:33.041849",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "wage_rate",
+   "fieldtype": "Float",
+   "label": "Wage rate",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "Tibeb Design Build",
+ "modified": "2025-05-02 10:28:14.832544",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Labor Payment New",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \n    lt.name AS \"Timsheet Id\",\n    lt.employee AS \"Labor Name:Data:220\",\n    lt.full_name AS \"Full Name:220\",\n    lt.job_title AS \"Job Title:Data:220\",\n    \n    IFNULL(t1.total_hours, 0) + IFNULL(t2.total_hours, 0) AS \"Total Hours:Int:100\",\n    (IFNULL(t1.total_hours, 0) + IFNULL(t2.total_hours, 0)) * %(wage_rate)s AS \"Amount:Currency:120\"\n\nFROM \n    `tabLabor Timesheet` lt\n\nLEFT JOIN (\n    SELECT \n        parent,\n        SUM(\n            IF(morning = 1, 4, 0) + \n            IF(afternoon = 1, 4, 0) + \n            IF(night = 1, 4, 0)\n        ) AS total_hours\n    FROM `tabLabor Timesheet Table 1`\n    GROUP BY parent\n) t1 ON t1.parent = lt.name\n\nLEFT JOIN (\n    SELECT \n        parent,\n        SUM(\n            IF(morning = 1, 4, 0) + \n            IF(afternoon = 1, 4, 0) + \n            IF(night = 1, 4, 0)\n        ) AS total_hours\n    FROM `tabLabor Timesheet Table 2`\n    GROUP BY parent\n) t2 ON t2.parent = lt.name\n\nWHERE \n    lt.from_date >= %(from_date)s\n    AND lt.to_date <= %(to_date)s\n\nORDER BY \n    lt.employee ASC;\n",
+ "ref_doctype": "Labor Timesheet",
+ "report_name": "Labor Payment New",
+ "report_type": "Query Report",
+ "roles": []
+}
